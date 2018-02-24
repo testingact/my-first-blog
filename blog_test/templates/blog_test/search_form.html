@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>Search</title>
+</head>
+<body>
+    <form class='post-form' method="POST">
+        {%csrf_token%} {{form.as_p}}
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>

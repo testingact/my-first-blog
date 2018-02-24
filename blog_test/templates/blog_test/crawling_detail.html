@@ -1,0 +1,25 @@
+{% extends 'blog_test/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {{crawlings.keyword}}<br />
+        {{urllist}}
+        -----------------------------------<br />
+        {% for url in urllist %}
+        {% for title in titlelist %}
+        {% for content in contentlist %}
+        주소 : {{ url }}<br />
+        ----------------------------------------<br />
+        제목 : {{ title }}<br />
+        ----------------------------------------<br />
+        내용 : {{ content }}<br />
+        ----------------------------------------<br />
+        ========================================================================<br />
+        {% endfor %}
+        {% endfor %}
+        {% endfor %}
+
+
+
+    </div>
+{% endblock %}

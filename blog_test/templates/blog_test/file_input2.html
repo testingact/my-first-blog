@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<meta charset="UTF-8">
+<html>
+<head>
+  <title>
+    분석 결과
+  </title>
+  <style type="text/css">
+
+  </style>
+
+</head>
+
+  <body>
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+
+    <input type="file" name="csv_file" />
+    <input type="submit" value="Upload" />
+
+</form>
+
+{{ figure_wc|safe }}
+
+
+  </body>
+</html>

@@ -1,0 +1,1107 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007ff4b2fdbec8, pid=15477, tid=140688859424512
+#
+# JRE version: OpenJDK Runtime Environment (7.0_151-b01) (build 1.7.0_151-b01)
+# Java VM: OpenJDK 64-Bit Server VM (24.151-b01 mixed mode linux-amd64 compressed oops)
+# Derivative: IcedTea 2.6.11
+# Distribution: Ubuntu 14.04 LTS, package 7u151-2.6.11-2ubuntu0.14.04.1
+# Problematic frame:
+# C  [_jpype.cpython-34m.so+0x25ec8]  JPJavaEnv::NewObjectA(_jclass*, _jmethodID*, jvalue*)+0x38
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please include
+# instructions on how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x0000000000000000
+
+Registers:
+RAX=0x00007ff4bd1ca9d0, RBX=0x00007ff4a8ba5ad8, RCX=0x0000000000002ae6, RDX=0x000000000099e020
+RSP=0x00007ff4ad7d1940, RBP=0x00007ff4a8b851a0, RSI=0x0000000000000000, RDI=0x000000000099e020
+R8 =0x0000000000000000, R9 =0x0000000000000002, R10=0xcccccccccccccccd, R11=0x0000000000000000
+R12=0x0000000000000000, R13=0x00007ff4b32426e8, R14=0x00007ff4bd1ca9d0, R15=0x00007ff4a8b972d0
+RIP=0x00007ff4b2fdbec8, EFLAGS=0x0000000000010246, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007ff4ad7d1940)
+0x00007ff4ad7d1940:   0000000000000000 00007ff4a802b530
+0x00007ff4ad7d1950:   00007ff4ad7d1c80 0000000000000000
+0x00007ff4ad7d1960:   0000000000000000 00007ff4a802f3b8
+0x00007ff4ad7d1970:   00007ff4ad7d1c80 00007ff4ad7d1c60
+0x00007ff4ad7d1980:   00007ff4a8c522f8 00007ff4b300bd74
+0x00007ff4ad7d1990:   00007ff4a90cac98 00007ff4ad7d1a10
+0x00007ff4ad7d19a0:   0000000000000000 00007ff4a802b530
+0x00007ff4ad7d19b0:   00007ff4ad7d1a30 00007ff4ad7d1a80
+0x00007ff4ad7d19c0:   00007ff4a8ba5ad8 00007ff4ad7d19f0
+0x00007ff4ad7d19d0:   00007ff4a90caa68 00007ff4a90caa68
+0x00007ff4ad7d19e0:   00007ff4a90caa69 00007ff4a90caa68
+0x00007ff4ad7d19f0:   00007ff4b323e030 00007ff4a9005b58
+0x00007ff4ad7d1a00:   00007ff4b5490d00 0000000000000018
+0x00007ff4ad7d1a10:   00007ff4a90caa68 00007ff4b5475f50
+0x00007ff4ad7d1a20:   0000000000000006 0000000000000000
+0x00007ff4ad7d1a30:   00007ff4b323e6d0 0000000000000000
+0x00007ff4ad7d1a40:   0000000000000000 0000000000000000
+0x00007ff4ad7d1a50:   0000000000000000 0000000000000000
+0x00007ff4ad7d1a60:   0000000000000000 0000000000000000
+0x00007ff4ad7d1a70:   0000000000000000 0000000000000000
+0x00007ff4ad7d1a80:   0000000000000000 0000000000000000
+0x00007ff4ad7d1a90:   0000000000000000 0000000000000000
+0x00007ff4ad7d1aa0:   0000000000000000 0000000000000000
+0x00007ff4ad7d1ab0:   0000000000000000 0000000000000000
+0x00007ff4ad7d1ac0:   0000000000000000 0000000000000000
+0x00007ff4ad7d1ad0:   0000000000000000 00007ff400000008
+0x00007ff4ad7d1ae0:   00007ff400000000 00007ff4b5490de0
+0x00007ff4ad7d1af0:   0000000000000000 00007ff4b5240120
+0x00007ff4ad7d1b00:   00007ff4ad7d19c8 00007ff4b5490940
+0x00007ff4ad7d1b10:   00007ff4b54908d0 00007ff4b54908e0
+0x00007ff4ad7d1b20:   00007ff4ad7d1ba0 00007ff4a8c52290
+0x00007ff4ad7d1b30:   00007ff4a8c522f8 0000000000000003 
+
+Instructions: (pc=0x00007ff4b2fdbec8)
+0x00007ff4b2fdbea8:   89 4c 24 08 e8 af fc ff ff 4c 8b 2d 88 3e 26 00
+0x00007ff4b2fdbeb8:   49 89 c4 49 8b 7d 00 48 8b 07 ff 50 30 49 89 c6
+0x00007ff4b2fdbec8:   49 8b 04 24 48 89 de 4c 89 e7 ff 90 d8 00 00 00
+0x00007ff4b2fdbed8:   48 89 c3 48 8b 05 ce 40 26 00 48 8b 38 e8 36 fd 
+
+Register to memory mapping:
+
+RAX=0x00007ff4bd1ca9d0 is an unknown value
+RBX=0x00007ff4a8ba5ad8 is a global jni handle
+RCX=0x0000000000002ae6 is an unknown value
+RDX=0x000000000099e020: <offset 0x59e020> in /root/dj_test/myvenv/bin/python at 0x0000000000400000
+RSP=0x00007ff4ad7d1940 is pointing into the stack for thread: 0x00007ff4a8040800
+RBP=0x00007ff4a8b851a0 is an unknown value
+RSI=0x0000000000000000 is an unknown value
+RDI=0x000000000099e020: <offset 0x59e020> in /root/dj_test/myvenv/bin/python at 0x0000000000400000
+R8 =0x0000000000000000 is an unknown value
+R9 =0x0000000000000002 is an unknown value
+R10=0xcccccccccccccccd is an unknown value
+R11=0x0000000000000000 is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13=0x00007ff4b32426e8: _ZN5JPEnv6s_HostE+0 in /root/dj_test/myvenv/lib/python3.4/site-packages/_jpype.cpython-34m.so at 0x00007ff4b2fb6000
+R14=0x00007ff4bd1ca9d0 is an unknown value
+R15=0x00007ff4a8b972d0 is a weak global jni handle
+
+
+Stack: [0x00007ff4acfd6000,0x00007ff4ad7d7000],  sp=0x00007ff4ad7d1940,  free space=8174k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [_jpype.cpython-34m.so+0x25ec8]  JPJavaEnv::NewObjectA(_jclass*, _jmethodID*, jvalue*)+0x38
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 68096K, used 41342K [0x00000000f0000000, 0x00000000f9900000, 0x0000000100000000)
+  eden space 65536K, 59% used [0x00000000f0000000,0x00000000f25e1140,0x00000000f4000000)
+  from space 2560K, 99% used [0x00000000f4000000,0x00000000f427e8c0,0x00000000f4280000)
+  to   space 12800K, 0% used [0x00000000f8c80000,0x00000000f8c80000,0x00000000f9900000)
+ ParOldGen       total 41984K, used 21400K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 50% used [0x00000000d0000000,0x00000000d14e6248,0x00000000d2900000)
+ PSPermGen       total 21504K, used 9993K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 46% used [0x00000000c5a00000,0x00000000c63c2630,0x00000000c6f00000)
+
+Card table byte_map: [0x00007ff4a41b4000,0x00007ff4a4388000] byte_map_base: 0x00007ff4a3b87000
+
+Polling page: 0x00007ff4cc71c000
+
+Code Cache  [0x00007ff4a4388000, 0x00007ff4a45f8000, 0x00007ff4a7388000)
+ total_blobs=876 nmethods=657 adapters=173 free_code_cache=47805Kb largest_free_block=48913216
+
+Compilation events (10 events):
+Event: 3.202 Thread 0x00007ff4a8b76800 nmethod 676 0x00007ff4a44d1f10 code [0x00007ff4a44d2060, 0x00007ff4a44d2118]
+Event: 3.202 Thread 0x00007ff4a8b76800  677             scala.collection.mutable.Builder$class::sizeHint (20 bytes)
+Event: 3.203 Thread 0x00007ff4a8b76800 nmethod 677 0x00007ff4a44d48d0 code [0x00007ff4a44d4a20, 0x00007ff4a44d4b18]
+Event: 3.203 Thread 0x00007ff4a8b76800  678             scala.collection.convert.Wrappers$JMapWrapperLike$$anon$2::ui (5 bytes)
+Event: 3.203 Thread 0x00007ff4a8b76800 nmethod 678 0x00007ff4a44d1d10 code [0x00007ff4a44d1e40, 0x00007ff4a44d1e98]
+Event: 3.203 Thread 0x00007ff4a8b76800  679             scala.collection.immutable.Vector::length (10 bytes)
+Event: 3.204 Thread 0x00007ff4a8b76800 nmethod 679 0x00007ff4a44d46d0 code [0x00007ff4a44d4800, 0x00007ff4a44d4858]
+Event: 3.224 Thread 0x00007ff4a8b73800 nmethod 674 0x00007ff4a44dfed0 code [0x00007ff4a44e01e0, 0x00007ff4a44e0ee0]
+Event: 1051.562 Thread 0x00007ff4a8b76800  680             java.lang.ref.ReferenceQueue::reallyPoll (69 bytes)
+Event: 1051.562 Thread 0x00007ff4a8b76800 nmethod 680 0x00007ff4a44d4490 code [0x00007ff4a44d45c0, 0x00007ff4a44d4638]
+
+GC Heap History (10 events):
+Event: 0.564 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 18944K, used 16384K [0x00000000f0000000, 0x00000000f1500000, 0x0000000100000000)
+  eden space 16384K, 100% used [0x00000000f0000000,0x00000000f1000000,0x00000000f1000000)
+  from space 2560K, 0% used [0x00000000f1280000,0x00000000f1280000,0x00000000f1500000)
+  to   space 2560K, 0% used [0x00000000f1000000,0x00000000f1000000,0x00000000f1280000)
+ ParOldGen       total 41984K, used 0K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 0% used [0x00000000d0000000,0x00000000d0000000,0x00000000d2900000)
+ PSPermGen       total 21504K, used 7040K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 32% used [0x00000000c5a00000,0x00000000c60e03b8,0x00000000c6f00000)
+Event: 0.570 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 18944K, used 2557K [0x00000000f0000000, 0x00000000f2500000, 0x0000000100000000)
+  eden space 16384K, 0% used [0x00000000f0000000,0x00000000f0000000,0x00000000f1000000)
+  from space 2560K, 99% used [0x00000000f1000000,0x00000000f127f638,0x00000000f1280000)
+  to   space 2560K, 0% used [0x00000000f2280000,0x00000000f2280000,0x00000000f2500000)
+ ParOldGen       total 41984K, used 728K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 1% used [0x00000000d0000000,0x00000000d00b61a0,0x00000000d2900000)
+ PSPermGen       total 21504K, used 7040K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 32% used [0x00000000c5a00000,0x00000000c60e03b8,0x00000000c6f00000)
+}
+Event: 1.310 GC heap before
+{Heap before GC invocations=2 (full 0):
+ PSYoungGen      total 18944K, used 18941K [0x00000000f0000000, 0x00000000f2500000, 0x0000000100000000)
+  eden space 16384K, 100% used [0x00000000f0000000,0x00000000f1000000,0x00000000f1000000)
+  from space 2560K, 99% used [0x00000000f1000000,0x00000000f127f638,0x00000000f1280000)
+  to   space 2560K, 0% used [0x00000000f2280000,0x00000000f2280000,0x00000000f2500000)
+ ParOldGen       total 41984K, used 728K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 1% used [0x00000000d0000000,0x00000000d00b61a0,0x00000000d2900000)
+ PSPermGen       total 21504K, used 8607K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 40% used [0x00000000c5a00000,0x00000000c6267ea8,0x00000000c6f00000)
+Event: 1.328 GC heap after
+Heap after GC invocations=2 (full 0):
+ PSYoungGen      total 35328K, used 2530K [0x00000000f0000000, 0x00000000f2500000, 0x0000000100000000)
+  eden space 32768K, 0% used [0x00000000f0000000,0x00000000f0000000,0x00000000f2000000)
+  from space 2560K, 98% used [0x00000000f2280000,0x00000000f24f8900,0x00000000f2500000)
+  to   space 2560K, 0% used [0x00000000f2000000,0x00000000f2000000,0x00000000f2280000)
+ ParOldGen       total 41984K, used 2004K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 4% used [0x00000000d0000000,0x00000000d01f52b0,0x00000000d2900000)
+ PSPermGen       total 21504K, used 8607K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 40% used [0x00000000c5a00000,0x00000000c6267ea8,0x00000000c6f00000)
+}
+Event: 1.756 GC heap before
+{Heap before GC invocations=3 (full 0):
+ PSYoungGen      total 35328K, used 35298K [0x00000000f0000000, 0x00000000f2500000, 0x0000000100000000)
+  eden space 32768K, 100% used [0x00000000f0000000,0x00000000f2000000,0x00000000f2000000)
+  from space 2560K, 98% used [0x00000000f2280000,0x00000000f24f8900,0x00000000f2500000)
+  to   space 2560K, 0% used [0x00000000f2000000,0x00000000f2000000,0x00000000f2280000)
+ ParOldGen       total 41984K, used 2004K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 4% used [0x00000000d0000000,0x00000000d01f52b0,0x00000000d2900000)
+ PSPermGen       total 21504K, used 8866K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 41% used [0x00000000c5a00000,0x00000000c62a8aa8,0x00000000c6f00000)
+Event: 1.779 GC heap after
+Heap after GC invocations=3 (full 0):
+ PSYoungGen      total 35328K, used 2556K [0x00000000f0000000, 0x00000000f4500000, 0x0000000100000000)
+  eden space 32768K, 0% used [0x00000000f0000000,0x00000000f0000000,0x00000000f2000000)
+  from space 2560K, 99% used [0x00000000f2000000,0x00000000f227f080,0x00000000f2280000)
+  to   space 2560K, 0% used [0x00000000f4280000,0x00000000f4280000,0x00000000f4500000)
+ ParOldGen       total 41984K, used 9179K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 21% used [0x00000000d0000000,0x00000000d08f6e30,0x00000000d2900000)
+ PSPermGen       total 21504K, used 8866K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 41% used [0x00000000c5a00000,0x00000000c62a8aa8,0x00000000c6f00000)
+}
+Event: 1.924 GC heap before
+{Heap before GC invocations=4 (full 0):
+ PSYoungGen      total 35328K, used 35324K [0x00000000f0000000, 0x00000000f4500000, 0x0000000100000000)
+  eden space 32768K, 100% used [0x00000000f0000000,0x00000000f2000000,0x00000000f2000000)
+  from space 2560K, 99% used [0x00000000f2000000,0x00000000f227f080,0x00000000f2280000)
+  to   space 2560K, 0% used [0x00000000f4280000,0x00000000f4280000,0x00000000f4500000)
+ ParOldGen       total 41984K, used 9179K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 21% used [0x00000000d0000000,0x00000000d08f6e30,0x00000000d2900000)
+ PSPermGen       total 21504K, used 8895K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 41% used [0x00000000c5a00000,0x00000000c62afcd8,0x00000000c6f00000)
+Event: 1.947 GC heap after
+Heap after GC invocations=4 (full 0):
+ PSYoungGen      total 68096K, used 2556K [0x00000000f0000000, 0x00000000f4500000, 0x0000000100000000)
+  eden space 65536K, 0% used [0x00000000f0000000,0x00000000f0000000,0x00000000f4000000)
+  from space 2560K, 99% used [0x00000000f4280000,0x00000000f44ff050,0x00000000f4500000)
+  to   space 2560K, 0% used [0x00000000f4000000,0x00000000f4000000,0x00000000f4280000)
+ ParOldGen       total 41984K, used 12019K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 28% used [0x00000000d0000000,0x00000000d0bbce40,0x00000000d2900000)
+ PSPermGen       total 21504K, used 8895K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 41% used [0x00000000c5a00000,0x00000000c62afcd8,0x00000000c6f00000)
+}
+Event: 2.411 GC heap before
+{Heap before GC invocations=5 (full 0):
+ PSYoungGen      total 68096K, used 68092K [0x00000000f0000000, 0x00000000f4500000, 0x0000000100000000)
+  eden space 65536K, 100% used [0x00000000f0000000,0x00000000f4000000,0x00000000f4000000)
+  from space 2560K, 99% used [0x00000000f4280000,0x00000000f44ff050,0x00000000f4500000)
+  to   space 2560K, 0% used [0x00000000f4000000,0x00000000f4000000,0x00000000f4280000)
+ ParOldGen       total 41984K, used 12019K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 28% used [0x00000000d0000000,0x00000000d0bbce40,0x00000000d2900000)
+ PSPermGen       total 21504K, used 9643K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 44% used [0x00000000c5a00000,0x00000000c636aec8,0x00000000c6f00000)
+Event: 2.444 GC heap after
+Heap after GC invocations=5 (full 0):
+ PSYoungGen      total 68096K, used 2554K [0x00000000f0000000, 0x00000000f9900000, 0x0000000100000000)
+  eden space 65536K, 0% used [0x00000000f0000000,0x00000000f0000000,0x00000000f4000000)
+  from space 2560K, 99% used [0x00000000f4000000,0x00000000f427e8c0,0x00000000f4280000)
+  to   space 12800K, 0% used [0x00000000f8c80000,0x00000000f8c80000,0x00000000f9900000)
+ ParOldGen       total 41984K, used 21400K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 50% used [0x00000000d0000000,0x00000000d14e6248,0x00000000d2900000)
+ PSPermGen       total 21504K, used 9643K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 44% used [0x00000000c5a00000,0x00000000c636aec8,0x00000000c6f00000)
+}
+
+Deoptimization events (10 events):
+Event: 2.468 Thread 0x00007ff4a8040800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007ff4a440b8c4 method=java.util.HashMap.getEntry(Ljava/lang/Object;)Ljava/util/HashMap$Entry; @ 71
+Event: 2.517 Thread 0x00007ff4a8040800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007ff4a445f014 method=java.lang.String.valueOf(Ljava/lang/Object;)Ljava/lang/String; @ 10
+Event: 2.517 Thread 0x00007ff4a8040800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007ff4a445f014 method=java.lang.String.valueOf(Ljava/lang/Object;)Ljava/lang/String; @ 10
+Event: 2.517 Thread 0x00007ff4a8040800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007ff4a445f014 method=java.lang.String.valueOf(Ljava/lang/Object;)Ljava/lang/String; @ 10
+Event: 2.518 Thread 0x00007ff4a8040800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007ff4a445f014 method=java.lang.String.valueOf(Ljava/lang/Object;)Ljava/lang/String; @ 10
+Event: 2.518 Thread 0x00007ff4a8040800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007ff4a445bc18 method=java.lang.String.valueOf(Ljava/lang/Object;)Ljava/lang/String; @ 10
+Event: 3.163 Thread 0x00007ff4a8040800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007ff4a44c1cc4 method=scala.collection.IndexedSeqOptimized$class.isEmpty(Lscala/collection/IndexedSeqOptimized;)Z @ 1
+Event: 3.164 Thread 0x00007ff4a8040800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007ff4a44c1cc4 method=scala.collection.IndexedSeqOptimized$class.isEmpty(Lscala/collection/IndexedSeqOptimized;)Z @ 1
+Event: 3.164 Thread 0x00007ff4a8040800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007ff4a44c1cc4 method=scala.collection.IndexedSeqOptimized$class.isEmpty(Lscala/collection/IndexedSeqOptimized;)Z @ 1
+Event: 3.164 Thread 0x00007ff4a8040800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007ff4a44c1cc4 method=scala.collection.IndexedSeqOptimized$class.isEmpty(Lscala/collection/IndexedSeqOptimized;)Z @ 1
+
+Internal exceptions (10 events):
+Event: 3.158 Thread 0x00007ff4a8040800 Threw 0x00000000f22ca408 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.158 Thread 0x00007ff4a8040800 Threw 0x00000000f22d76a8 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.159 Thread 0x00007ff4a8040800 Threw 0x00000000f22dc9e8 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.159 Thread 0x00007ff4a8040800 Threw 0x00000000f22e1858 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.159 Thread 0x00007ff4a8040800 Threw 0x00000000f22e71e0 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.161 Thread 0x00007ff4a8040800 Threw 0x00000000f22ed0a0 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.161 Thread 0x00007ff4a8040800 Threw 0x00000000f22f3410 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.163 Thread 0x00007ff4a8040800 Threw 0x00000000f22fc778 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.163 Thread 0x00007ff4a8040800 Threw 0x00000000f2302148 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.165 Thread 0x00007ff4a8040800 Threw 0x00000000f2309538 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+
+Events (10 events):
+Event: 3.168 loading class 0x00007ff4a8dc2060
+Event: 3.168 loading class 0x00007ff4a8dc2060 done
+Event: 3.168 loading class 0x00007ff4a8dbfe30
+Event: 3.168 loading class 0x00007ff4a8dbfe30 done
+Event: 3.168 loading class 0x00007ff4a8dc21c0
+Event: 3.168 loading class 0x00007ff4a8dc21c0 done
+Event: 3.169 loading class 0x00007ff4a8dc2290
+Event: 3.169 loading class 0x00007ff4a8dc2290 done
+Event: 4.090 Executing VM operation: EnableBiasedLocking
+Event: 4.090 Executing VM operation: EnableBiasedLocking done
+
+
+Dynamic libraries:
+00400000-006fe000 r-xp 00000000 fd:03 1975659                            /root/dj_test/myvenv/bin/python3.4
+008fe000-008ff000 r--p 002fe000 fd:03 1975659                            /root/dj_test/myvenv/bin/python3.4
+008ff000-0098b000 rw-p 002ff000 fd:03 1975659                            /root/dj_test/myvenv/bin/python3.4
+0098b000-009a7000 rw-p 00000000 00:00 0 
+01708000-02033000 rw-p 00000000 00:00 0                                  [heap]
+c5a00000-c6f00000 rw-p 00000000 00:00 0 
+c6f00000-d0000000 rw-p 00000000 00:00 0 
+d0000000-d2900000 rw-p 00000000 00:00 0 
+d2900000-f0000000 rw-p 00000000 00:00 0 
+f0000000-f9900000 rw-p 00000000 00:00 0 
+f9900000-100000000 rw-p 00000000 00:00 0 
+7ff474000000-7ff474021000 rw-p 00000000 00:00 0 
+7ff474021000-7ff478000000 ---p 00000000 00:00 0 
+7ff478000000-7ff478021000 rw-p 00000000 00:00 0 
+7ff478021000-7ff47c000000 ---p 00000000 00:00 0 
+7ff47c000000-7ff47c828000 rw-p 00000000 00:00 0 
+7ff47c828000-7ff480000000 ---p 00000000 00:00 0 
+7ff480000000-7ff480021000 rw-p 00000000 00:00 0 
+7ff480021000-7ff484000000 ---p 00000000 00:00 0 
+7ff484000000-7ff484021000 rw-p 00000000 00:00 0 
+7ff484021000-7ff488000000 ---p 00000000 00:00 0 
+7ff488000000-7ff4885d0000 rw-p 00000000 00:00 0 
+7ff4885d0000-7ff48c000000 ---p 00000000 00:00 0 
+7ff48c000000-7ff48c021000 rw-p 00000000 00:00 0 
+7ff48c021000-7ff490000000 ---p 00000000 00:00 0 
+7ff490000000-7ff490021000 rw-p 00000000 00:00 0 
+7ff490021000-7ff494000000 ---p 00000000 00:00 0 
+7ff494000000-7ff494021000 rw-p 00000000 00:00 0 
+7ff494021000-7ff498000000 ---p 00000000 00:00 0 
+7ff498000000-7ff498021000 rw-p 00000000 00:00 0 
+7ff498021000-7ff49c000000 ---p 00000000 00:00 0 
+7ff49c000000-7ff49c021000 rw-p 00000000 00:00 0 
+7ff49c021000-7ff4a0000000 ---p 00000000 00:00 0 
+7ff4a1212000-7ff4a14f1000 rw-p 00000000 00:00 0 
+7ff4a14f1000-7ff4a14f4000 ---p 00000000 00:00 0 
+7ff4a14f4000-7ff4a15f2000 rw-p 00000000 00:00 0                          [stack:15496]
+7ff4a15f2000-7ff4a15f3000 ---p 00000000 00:00 0 
+7ff4a15f3000-7ff4a16f3000 rw-p 00000000 00:00 0                          [stack:15495]
+7ff4a16f3000-7ff4a16f6000 ---p 00000000 00:00 0 
+7ff4a16f6000-7ff4a17f4000 rw-p 00000000 00:00 0                          [stack:15494]
+7ff4a17f4000-7ff4a17f7000 ---p 00000000 00:00 0 
+7ff4a17f7000-7ff4a18f5000 rw-p 00000000 00:00 0                          [stack:15493]
+7ff4a18f5000-7ff4a18f8000 ---p 00000000 00:00 0 
+7ff4a18f8000-7ff4a19f6000 rw-p 00000000 00:00 0                          [stack:15492]
+7ff4a19f6000-7ff4a19f9000 ---p 00000000 00:00 0 
+7ff4a19f9000-7ff4a1af7000 rw-p 00000000 00:00 0                          [stack:15491]
+7ff4a1af7000-7ff4a1afa000 ---p 00000000 00:00 0 
+7ff4a1afa000-7ff4a1bf8000 rw-p 00000000 00:00 0                          [stack:15490]
+7ff4a1bf8000-7ff4a1bfb000 ---p 00000000 00:00 0 
+7ff4a1bfb000-7ff4a1cf9000 rw-p 00000000 00:00 0                          [stack:15489]
+7ff4a1cf9000-7ff4a1cfa000 ---p 00000000 00:00 0 
+7ff4a1cfa000-7ff4a1dfa000 rw-p 00000000 00:00 0                          [stack:15488]
+7ff4a1dfa000-7ff4a1faf000 r--s 01d66000 fd:03 1071808                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+7ff4a1faf000-7ff4a3eb2000 rw-p 00000000 00:00 0 
+7ff4a3eb2000-7ff4a3eb3000 ---p 00000000 00:00 0 
+7ff4a3eb3000-7ff4a3fb3000 rw-p 00000000 00:00 0                          [stack:15487]
+7ff4a3fb3000-7ff4a3fb4000 ---p 00000000 00:00 0 
+7ff4a3fb4000-7ff4a40c9000 rw-p 00000000 00:00 0                          [stack:15486]
+7ff4a40c9000-7ff4a41b4000 rw-p 00000000 00:00 0 
+7ff4a41b4000-7ff4a41bf000 rw-p 00000000 00:00 0 
+7ff4a41bf000-7ff4a4207000 rw-p 00000000 00:00 0 
+7ff4a4207000-7ff4a421c000 rw-p 00000000 00:00 0 
+7ff4a421c000-7ff4a4307000 rw-p 00000000 00:00 0 
+7ff4a4307000-7ff4a4354000 rw-p 00000000 00:00 0 
+7ff4a4354000-7ff4a4387000 rw-p 00000000 00:00 0 
+7ff4a4387000-7ff4a4388000 rw-p 00000000 00:00 0 
+7ff4a4388000-7ff4a45f8000 rwxp 00000000 00:00 0 
+7ff4a45f8000-7ff4a7388000 rw-p 00000000 00:00 0 
+7ff4a7388000-7ff4a7390000 r-xp 00000000 fd:03 1071840                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7ff4a7390000-7ff4a758f000 ---p 00008000 fd:03 1071840                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7ff4a758f000-7ff4a7590000 r--p 00007000 fd:03 1071840                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7ff4a7590000-7ff4a7591000 rw-p 00008000 fd:03 1071840                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7ff4a7591000-7ff4a759c000 r-xp 00000000 fd:03 1835260                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7ff4a759c000-7ff4a779b000 ---p 0000b000 fd:03 1835260                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7ff4a779b000-7ff4a779c000 r--p 0000a000 fd:03 1835260                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7ff4a779c000-7ff4a779d000 rw-p 0000b000 fd:03 1835260                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7ff4a779d000-7ff4a77b4000 r-xp 00000000 fd:03 1847303                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7ff4a77b4000-7ff4a79b3000 ---p 00017000 fd:03 1847303                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7ff4a79b3000-7ff4a79b4000 r--p 00016000 fd:03 1847303                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7ff4a79b4000-7ff4a79b5000 rw-p 00017000 fd:03 1847303                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7ff4a79b5000-7ff4a79b7000 rw-p 00000000 00:00 0 
+7ff4a79b7000-7ff4a79c0000 r-xp 00000000 fd:03 1847292                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7ff4a79c0000-7ff4a7bbf000 ---p 00009000 fd:03 1847292                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7ff4a7bbf000-7ff4a7bc0000 r--p 00008000 fd:03 1847292                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7ff4a7bc0000-7ff4a7bc1000 rw-p 00009000 fd:03 1847292                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7ff4a7bc1000-7ff4a7beb000 r-xp 00000000 fd:03 1071861                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7ff4a7beb000-7ff4a7deb000 ---p 0002a000 fd:03 1071861                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7ff4a7deb000-7ff4a7dec000 r--p 0002a000 fd:03 1071861                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7ff4a7dec000-7ff4a7dee000 rw-p 0002b000 fd:03 1071861                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7ff4a7dee000-7ff4a7dfe000 r-xp 00000000 fd:03 1071851                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7ff4a7dfe000-7ff4a7ffd000 ---p 00010000 fd:03 1071851                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7ff4a7ffd000-7ff4a7fff000 r--p 0000f000 fd:03 1071851                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7ff4a7fff000-7ff4a8000000 rw-p 00011000 fd:03 1071851                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7ff4a8000000-7ff4a921b000 rw-p 00000000 00:00 0 
+7ff4a921b000-7ff4ac000000 ---p 00000000 00:00 0 
+7ff4ac009000-7ff4ac061000 r--s 004f0000 fd:03 2759527                    /root/dj_test/myvenv/lib/python3.4/site-packages/konlpy/java/scala-library-2.11.4.jar
+7ff4ac061000-7ff4ac06c000 rw-p 00000000 00:00 0 
+7ff4ac06c000-7ff4ac0b4000 rw-p 00000000 00:00 0 
+7ff4ac0b4000-7ff4ac0be000 rw-p 00000000 00:00 0 
+7ff4ac0be000-7ff4ac174000 rw-p 00000000 00:00 0 
+7ff4ac174000-7ff4acca8000 r-xp 00000000 fd:03 1071866                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7ff4acca8000-7ff4acea8000 ---p 00b34000 fd:03 1071866                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7ff4acea8000-7ff4acf43000 r--p 00b34000 fd:03 1071866                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7ff4acf43000-7ff4acf66000 rw-p 00bcf000 fd:03 1071866                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7ff4acf66000-7ff4acfd6000 rw-p 00000000 00:00 0 
+7ff4acfd6000-7ff4acfd9000 ---p 00000000 00:00 0 
+7ff4acfd9000-7ff4ad7d7000 rw-p 00000000 00:00 0                          [stack:17401]
+7ff4ad7d7000-7ff4ad7e1000 r-xp 00000000 fd:03 1835241                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7ff4ad7e1000-7ff4ad9e0000 ---p 0000a000 fd:03 1835241                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7ff4ad9e0000-7ff4ad9e1000 r--p 00009000 fd:03 1835241                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7ff4ad9e1000-7ff4ad9e2000 rw-p 0000a000 fd:03 1835241                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7ff4ad9e2000-7ff4adaa2000 rw-p 00000000 00:00 0 
+7ff4adaa2000-7ff4adabb000 r-xp 00000000 fd:03 2885567                    /root/dj_test/myvenv/lib/python3.4/site-packages/wordcloud/query_integral_image.cpython-34m.so
+7ff4adabb000-7ff4adcba000 ---p 00019000 fd:03 2885567                    /root/dj_test/myvenv/lib/python3.4/site-packages/wordcloud/query_integral_image.cpython-34m.so
+7ff4adcba000-7ff4adcbb000 r--p 00018000 fd:03 2885567                    /root/dj_test/myvenv/lib/python3.4/site-packages/wordcloud/query_integral_image.cpython-34m.so
+7ff4adcbb000-7ff4adcbe000 rw-p 00019000 fd:03 2885567                    /root/dj_test/myvenv/lib/python3.4/site-packages/wordcloud/query_integral_image.cpython-34m.so
+7ff4adcbe000-7ff4adcee000 r-xp 00000000 fd:03 2885546                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libpng16-4b619e46.so.16.25.0
+7ff4adcee000-7ff4adeee000 ---p 00030000 fd:03 2885546                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libpng16-4b619e46.so.16.25.0
+7ff4adeee000-7ff4adeef000 rw-p 00030000 fd:03 2885546                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libpng16-4b619e46.so.16.25.0
+7ff4adeef000-7ff4adef3000 rw-p 000e3000 fd:03 2885546                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libpng16-4b619e46.so.16.25.0
+7ff4adef3000-7ff4adf9d000 r-xp 00000000 fd:03 2885553                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libfreetype-0891c94d.so.6.15.0
+7ff4adf9d000-7ff4ae19d000 ---p 000aa000 fd:03 2885553                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libfreetype-0891c94d.so.6.15.0
+7ff4ae19d000-7ff4ae1a5000 rw-p 000aa000 fd:03 2885553                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libfreetype-0891c94d.so.6.15.0
+7ff4ae1a5000-7ff4ae1ab000 rw-p 00380000 fd:03 2885553                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libfreetype-0891c94d.so.6.15.0
+7ff4ae1ab000-7ff4ae1b0000 r-xp 00000000 fd:03 2885390                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/_imagingft.cpython-34m.so
+7ff4ae1b0000-7ff4ae3b0000 ---p 00005000 fd:03 2885390                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/_imagingft.cpython-34m.so
+7ff4ae3b0000-7ff4ae3b1000 rw-p 00005000 fd:03 2885390                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/_imagingft.cpython-34m.so
+7ff4ae3b1000-7ff4ae3b3000 rw-p 00015000 fd:03 2885390                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/_imagingft.cpython-34m.so
+7ff4ae3b3000-7ff4aec33000 rw-p 00000000 00:00 0 
+7ff4aec33000-7ff4aec8a000 r-xp 00000000 fd:03 2762849                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/backends/_backend_agg.cpython-34m.so
+7ff4aec8a000-7ff4aee8a000 ---p 00057000 fd:03 2762849                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/backends/_backend_agg.cpython-34m.so
+7ff4aee8a000-7ff4aee8b000 rw-p 00057000 fd:03 2762849                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/backends/_backend_agg.cpython-34m.so
+7ff4aee8b000-7ff4aee8c000 rw-p 00000000 00:00 0 
+7ff4aee8c000-7ff4aee94000 r-xp 00000000 fd:03 2762826                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/backends/_tkagg.cpython-34m.so
+7ff4aee94000-7ff4af093000 ---p 00008000 fd:03 2762826                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/backends/_tkagg.cpython-34m.so
+7ff4af093000-7ff4af094000 rw-p 00007000 fd:03 2762826                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/backends/_tkagg.cpython-34m.so
+7ff4af094000-7ff4af095000 rw-p 00000000 00:00 0 
+7ff4af095000-7ff4af0ba000 r-xp 00000000 fd:03 1835159                    /lib/x86_64-linux-gnu/libpng12.so.0.50.0
+7ff4af0ba000-7ff4af2b9000 ---p 00025000 fd:03 1835159                    /lib/x86_64-linux-gnu/libpng12.so.0.50.0
+7ff4af2b9000-7ff4af2ba000 r--p 00024000 fd:03 1835159                    /lib/x86_64-linux-gnu/libpng12.so.0.50.0
+7ff4af2ba000-7ff4af2bb000 rw-p 00025000 fd:03 1835159                    /lib/x86_64-linux-gnu/libpng12.so.0.50.0
+7ff4af2bb000-7ff4af2c0000 r-xp 00000000 fd:03 925450                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7ff4af2c0000-7ff4af4bf000 ---p 00005000 fd:03 925450                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7ff4af4bf000-7ff4af4c0000 r--p 00004000 fd:03 925450                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7ff4af4c0000-7ff4af4c1000 rw-p 00005000 fd:03 925450                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7ff4af4c1000-7ff4af4c3000 r-xp 00000000 fd:03 925448                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7ff4af4c3000-7ff4af6c3000 ---p 00002000 fd:03 925448                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7ff4af6c3000-7ff4af6c4000 r--p 00002000 fd:03 925448                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7ff4af6c4000-7ff4af6c5000 rw-p 00003000 fd:03 925448                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7ff4af6c5000-7ff4af6d6000 r-xp 00000000 fd:03 919601                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7ff4af6d6000-7ff4af8d5000 ---p 00011000 fd:03 919601                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7ff4af8d5000-7ff4af8d6000 r--p 00010000 fd:03 919601                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7ff4af8d6000-7ff4af8d7000 rw-p 00011000 fd:03 919601                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7ff4af8d7000-7ff4af8e0000 r-xp 00000000 fd:03 920095                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7ff4af8e0000-7ff4afadf000 ---p 00009000 fd:03 920095                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7ff4afadf000-7ff4afae0000 r--p 00008000 fd:03 920095                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7ff4afae0000-7ff4afae1000 rw-p 00009000 fd:03 920095                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7ff4afae1000-7ff4afb7e000 r-xp 00000000 fd:03 919617                     /usr/lib/x86_64-linux-gnu/libfreetype.so.6.11.1
+7ff4afb7e000-7ff4afd7d000 ---p 0009d000 fd:03 919617                     /usr/lib/x86_64-linux-gnu/libfreetype.so.6.11.1
+7ff4afd7d000-7ff4afd83000 r--p 0009c000 fd:03 919617                     /usr/lib/x86_64-linux-gnu/libfreetype.so.6.11.1
+7ff4afd83000-7ff4afd84000 rw-p 000a2000 fd:03 919617                     /usr/lib/x86_64-linux-gnu/libfreetype.so.6.11.1
+7ff4afd84000-7ff4afda1000 r-xp 00000000 fd:03 925452                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7ff4afda1000-7ff4affa1000 ---p 0001d000 fd:03 925452                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7ff4affa1000-7ff4affa2000 r--p 0001d000 fd:03 925452                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7ff4affa2000-7ff4affa3000 rw-p 0001e000 fd:03 925452                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7ff4affa3000-7ff4affa5000 r-xp 00000000 fd:03 920231                     /usr/lib/x86_64-linux-gnu/libXss.so.1.0.0
+7ff4affa5000-7ff4b01a5000 ---p 00002000 fd:03 920231                     /usr/lib/x86_64-linux-gnu/libXss.so.1.0.0
+7ff4b01a5000-7ff4b01a6000 r--p 00002000 fd:03 920231                     /usr/lib/x86_64-linux-gnu/libXss.so.1.0.0
+7ff4b01a6000-7ff4b01a7000 rw-p 00003000 fd:03 920231                     /usr/lib/x86_64-linux-gnu/libXss.so.1.0.0
+7ff4b01a7000-7ff4b01e1000 r-xp 00000000 fd:03 920087                     /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.8.0
+7ff4b01e1000-7ff4b03e0000 ---p 0003a000 fd:03 920087                     /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.8.0
+7ff4b03e0000-7ff4b03e2000 r--p 00039000 fd:03 920087                     /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.8.0
+7ff4b03e2000-7ff4b03e3000 rw-p 0003b000 fd:03 920087                     /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.8.0
+7ff4b03e3000-7ff4b03f7000 r-xp 00000000 fd:03 920229                     /usr/lib/x86_64-linux-gnu/libXft.so.2.3.1
+7ff4b03f7000-7ff4b05f6000 ---p 00014000 fd:03 920229                     /usr/lib/x86_64-linux-gnu/libXft.so.2.3.1
+7ff4b05f6000-7ff4b05f7000 r--p 00013000 fd:03 920229                     /usr/lib/x86_64-linux-gnu/libXft.so.2.3.1
+7ff4b05f7000-7ff4b05f8000 rw-p 00014000 fd:03 920229                     /usr/lib/x86_64-linux-gnu/libXft.so.2.3.1
+7ff4b05f8000-7ff4b0728000 r-xp 00000000 fd:03 925475                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7ff4b0728000-7ff4b0928000 ---p 00130000 fd:03 925475                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7ff4b0928000-7ff4b0929000 r--p 00130000 fd:03 925475                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7ff4b0929000-7ff4b092d000 rw-p 00131000 fd:03 925475                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7ff4b092d000-7ff4b0ab7000 r-xp 00000000 fd:03 920224                     /usr/lib/x86_64-linux-gnu/libtcl8.6.so
+7ff4b0ab7000-7ff4b0cb6000 ---p 0018a000 fd:03 920224                     /usr/lib/x86_64-linux-gnu/libtcl8.6.so
+7ff4b0cb6000-7ff4b0cc3000 r--p 00189000 fd:03 920224                     /usr/lib/x86_64-linux-gnu/libtcl8.6.so
+7ff4b0cc3000-7ff4b0cc4000 rw-p 00196000 fd:03 920224                     /usr/lib/x86_64-linux-gnu/libtcl8.6.so
+7ff4b0cc4000-7ff4b0cc5000 rw-p 00000000 00:00 0 
+7ff4b0cc5000-7ff4b0dfb000 r-xp 00000000 fd:03 920233                     /usr/lib/x86_64-linux-gnu/libtk8.6.so
+7ff4b0dfb000-7ff4b0ffb000 ---p 00136000 fd:03 920233                     /usr/lib/x86_64-linux-gnu/libtk8.6.so
+7ff4b0ffb000-7ff4b1010000 r--p 00136000 fd:03 920233                     /usr/lib/x86_64-linux-gnu/libtk8.6.so
+7ff4b1010000-7ff4b1019000 rw-p 0014b000 fd:03 920233                     /usr/lib/x86_64-linux-gnu/libtk8.6.so
+7ff4b1019000-7ff4b115b000 r-xp 00000000 fd:03 937112                     /usr/lib/libBLT.2.5.so.8.6
+7ff4b115b000-7ff4b135b000 ---p 00142000 fd:03 937112                     /usr/lib/libBLT.2.5.so.8.6
+7ff4b135b000-7ff4b135c000 r--p 00142000 fd:03 937112                     /usr/lib/libBLT.2.5.so.8.6
+7ff4b135c000-7ff4b137d000 rw-p 00143000 fd:03 937112                     /usr/lib/libBLT.2.5.so.8.6
+7ff4b137d000-7ff4b137e000 rw-p 00000000 00:00 0 
+7ff4b137e000-7ff4b138a000 r-xp 00000000 fd:03 937126                     /usr/lib/python3.4/lib-dynload/_tkinter.cpython-34m-x86_64-linux-gnu.so
+7ff4b138a000-7ff4b1589000 ---p 0000c000 fd:03 937126                     /usr/lib/python3.4/lib-dynload/_tkinter.cpython-34m-x86_64-linux-gnu.so
+7ff4b1589000-7ff4b158a000 r--p 0000b000 fd:03 937126                     /usr/lib/python3.4/lib-dynload/_tkinter.cpython-34m-x86_64-linux-gnu.so
+7ff4b158a000-7ff4b158b000 rw-p 0000c000 fd:03 937126                     /usr/lib/python3.4/lib-dynload/_tkinter.cpython-34m-x86_64-linux-gnu.so
+7ff4b158b000-7ff4b178b000 rw-p 00000000 00:00 0 
+7ff4b178b000-7ff4b17e7000 r-xp 00000000 fd:03 2762192                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_qhull.cpython-34m.so
+7ff4b17e7000-7ff4b19e6000 ---p 0005c000 fd:03 2762192                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_qhull.cpython-34m.so
+7ff4b19e6000-7ff4b19e8000 rw-p 0005b000 fd:03 2762192                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_qhull.cpython-34m.so
+7ff4b19e8000-7ff4b19ea000 rw-p 00000000 00:00 0 
+7ff4b19ea000-7ff4b1a09000 r-xp 00000000 fd:03 2762231                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_tri.cpython-34m.so
+7ff4b1a09000-7ff4b1c08000 ---p 0001f000 fd:03 2762231                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_tri.cpython-34m.so
+7ff4b1c08000-7ff4b1c0a000 rw-p 0001e000 fd:03 2762231                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_tri.cpython-34m.so
+7ff4b1c0a000-7ff4b1c8a000 rw-p 00000000 00:00 0 
+7ff4b1c8a000-7ff4b1cc5000 r-xp 00000000 fd:03 2762190                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_image.cpython-34m.so
+7ff4b1cc5000-7ff4b1ec4000 ---p 0003b000 fd:03 2762190                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_image.cpython-34m.so
+7ff4b1ec4000-7ff4b1ec6000 rw-p 0003a000 fd:03 2762190                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_image.cpython-34m.so
+7ff4b1ec6000-7ff4b1f86000 rw-p 00000000 00:00 0 
+7ff4b1f86000-7ff4b1fb6000 r-xp 00000000 fd:03 2762427                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/.libs/libpng16-3e9b18e2.so.16.21.0
+7ff4b1fb6000-7ff4b21b5000 ---p 00030000 fd:03 2762427                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/.libs/libpng16-3e9b18e2.so.16.21.0
+7ff4b21b5000-7ff4b21b6000 rw-p 0002f000 fd:03 2762427                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/.libs/libpng16-3e9b18e2.so.16.21.0
+7ff4b21b6000-7ff4b21ba000 rw-p 000df000 fd:03 2762427                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/.libs/libpng16-3e9b18e2.so.16.21.0
+7ff4b21ba000-7ff4b21c2000 r-xp 00000000 fd:03 2762213                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_png.cpython-34m.so
+7ff4b21c2000-7ff4b23c2000 ---p 00008000 fd:03 2762213                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_png.cpython-34m.so
+7ff4b23c2000-7ff4b23c3000 rw-p 00008000 fd:03 2762213                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_png.cpython-34m.so
+7ff4b23c3000-7ff4b23c5000 rw-p 0002f000 fd:03 2762213                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_png.cpython-34m.so
+7ff4b23c5000-7ff4b2495000 r-xp 00000000 fd:03 2762205                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/ft2font.cpython-34m.so
+7ff4b2495000-7ff4b2694000 ---p 000d0000 fd:03 2762205                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/ft2font.cpython-34m.so
+7ff4b2694000-7ff4b269c000 rw-p 000cf000 fd:03 2762205                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/ft2font.cpython-34m.so
+7ff4b269c000-7ff4b29dd000 rw-p 00000000 00:00 0 
+7ff4b29dd000-7ff4b29ef000 r-xp 00000000 fd:03 2762203                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_contour.cpython-34m.so
+7ff4b29ef000-7ff4b2bef000 ---p 00012000 fd:03 2762203                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_contour.cpython-34m.so
+7ff4b2bef000-7ff4b2bf0000 rw-p 00012000 fd:03 2762203                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_contour.cpython-34m.so
+7ff4b2bf0000-7ff4b2bf6000 r-xp 00000000 fd:03 2762252                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_cntr.cpython-34m.so
+7ff4b2bf6000-7ff4b2df5000 ---p 00006000 fd:03 2762252                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_cntr.cpython-34m.so
+7ff4b2df5000-7ff4b2df6000 rw-p 00005000 fd:03 2762252                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_cntr.cpython-34m.so
+7ff4b2df6000-7ff4b2fb6000 rw-p 00000000 00:00 0 
+7ff4b2fb6000-7ff4b303e000 r-xp 00000000 fd:03 1978145                    /root/dj_test/myvenv/lib/python3.4/site-packages/_jpype.cpython-34m.so
+7ff4b303e000-7ff4b323d000 ---p 00088000 fd:03 1978145                    /root/dj_test/myvenv/lib/python3.4/site-packages/_jpype.cpython-34m.so
+7ff4b323d000-7ff4b3240000 r--p 00087000 fd:03 1978145                    /root/dj_test/myvenv/lib/python3.4/site-packages/_jpype.cpython-34m.so
+7ff4b3240000-7ff4b3243000 rw-p 0008a000 fd:03 1978145                    /root/dj_test/myvenv/lib/python3.4/site-packages/_jpype.cpython-34m.so
+7ff4b3243000-7ff4b3264000 r-xp 00000000 fd:03 1835213                    /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7ff4b3264000-7ff4b3463000 ---p 00021000 fd:03 1835213                    /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7ff4b3463000-7ff4b3464000 r--p 00020000 fd:03 1835213                    /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7ff4b3464000-7ff4b3465000 rw-p 00021000 fd:03 1835213                    /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7ff4b3465000-7ff4b346b000 r-xp 00000000 fd:03 919399                     /usr/lib/python3.4/lib-dynload/_lzma.cpython-34m-x86_64-linux-gnu.so
+7ff4b346b000-7ff4b366a000 ---p 00006000 fd:03 919399                     /usr/lib/python3.4/lib-dynload/_lzma.cpython-34m-x86_64-linux-gnu.so
+7ff4b366a000-7ff4b366b000 r--p 00005000 fd:03 919399                     /usr/lib/python3.4/lib-dynload/_lzma.cpython-34m-x86_64-linux-gnu.so
+7ff4b366b000-7ff4b366d000 rw-p 00006000 fd:03 919399                     /usr/lib/python3.4/lib-dynload/_lzma.cpython-34m-x86_64-linux-gnu.so
+7ff4b366d000-7ff4b386d000 rw-p 00000000 00:00 0 
+7ff4b386d000-7ff4b387f000 r-xp 00000000 fd:03 2760709                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/testing.cpython-34m.so
+7ff4b387f000-7ff4b3a7e000 ---p 00012000 fd:03 2760709                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/testing.cpython-34m.so
+7ff4b3a7e000-7ff4b3a7f000 r--p 00011000 fd:03 2760709                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/testing.cpython-34m.so
+7ff4b3a7f000-7ff4b3a81000 rw-p 00012000 fd:03 2760709                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/testing.cpython-34m.so
+7ff4b3a81000-7ff4b3ac1000 rw-p 00000000 00:00 0 
+7ff4b3ac1000-7ff4b3ac2000 r-xp 00000000 fd:03 2760612                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/util/_move.cpython-34m.so
+7ff4b3ac2000-7ff4b3cc2000 ---p 00001000 fd:03 2760612                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/util/_move.cpython-34m.so
+7ff4b3cc2000-7ff4b3cc3000 r--p 00001000 fd:03 2760612                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/util/_move.cpython-34m.so
+7ff4b3cc3000-7ff4b3cc4000 rw-p 00002000 fd:03 2760612                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/util/_move.cpython-34m.so
+7ff4b3cc4000-7ff4b3cda000 r-xp 00000000 fd:03 2760553                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/io/msgpack/_unpacker.cpython-34m.so
+7ff4b3cda000-7ff4b3eda000 ---p 00016000 fd:03 2760553                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/io/msgpack/_unpacker.cpython-34m.so
+7ff4b3eda000-7ff4b3edb000 r--p 00016000 fd:03 2760553                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/io/msgpack/_unpacker.cpython-34m.so
+7ff4b3edb000-7ff4b3edd000 rw-p 00017000 fd:03 2760553                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/io/msgpack/_unpacker.cpython-34m.so
+7ff4b3edd000-7ff4b3ede000 rw-p 00000000 00:00 0 
+7ff4b3ede000-7ff4b3eef000 r-xp 00000000 fd:03 2760556                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/io/msgpack/_packer.cpython-34m.so
+7ff4b3eef000-7ff4b40ee000 ---p 00011000 fd:03 2760556                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/io/msgpack/_packer.cpython-34m.so
+7ff4b40ee000-7ff4b40ef000 r--p 00010000 fd:03 2760556                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/io/msgpack/_packer.cpython-34m.so
+7ff4b40ef000-7ff4b40f1000 rw-p 00011000 fd:03 2760556                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/io/msgpack/_packer.cpython-34m.so
+7ff4b40f1000-7ff4b41f1000 rw-p 00000000 00:00 0 
+7ff4b41f1000-7ff4b4206000 r-xp 00000000 fd:03 2760704                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/json.cpython-34m.so
+7ff4b4206000-7ff4b4405000 ---p 00015000 fd:03 2760704                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/json.cpython-34m.so
+7ff4b4405000-7ff4b4406000 r--p 00014000 fd:03 2760704                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/json.cpython-34m.so
+7ff4b4406000-7ff4b4407000 rw-p 00015000 fd:03 2760704                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/json.cpython-34m.so
+7ff4b4407000-7ff4b448b000 r-xp 00000000 fd:03 2760714                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/parsers.cpython-34m.so
+7ff4b448b000-7ff4b468a000 ---p 00084000 fd:03 2760714                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/parsers.cpython-34m.so
+7ff4b468a000-7ff4b468b000 r--p 00083000 fd:03 2760714                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/parsers.cpython-34m.so
+7ff4b468b000-7ff4b4691000 rw-p 00084000 fd:03 2760714                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/parsers.cpython-34m.so
+7ff4b4691000-7ff4b4713000 rw-p 00000000 00:00 0 
+7ff4b4713000-7ff4b4728000 r-xp 00000000 fd:03 2760720                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/reshape.cpython-34m.so
+7ff4b4728000-7ff4b4928000 ---p 00015000 fd:03 2760720                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/reshape.cpython-34m.so
+7ff4b4928000-7ff4b4929000 r--p 00015000 fd:03 2760720                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/reshape.cpython-34m.so
+7ff4b4929000-7ff4b492c000 rw-p 00016000 fd:03 2760720                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/reshape.cpython-34m.so
+7ff4b492c000-7ff4b49ac000 rw-p 00000000 00:00 0 
+7ff4b49ac000-7ff4b4a48000 r-xp 00000000 fd:03 2760721                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/groupby.cpython-34m.so
+7ff4b4a48000-7ff4b4c47000 ---p 0009c000 fd:03 2760721                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/groupby.cpython-34m.so
+7ff4b4c47000-7ff4b4c48000 r--p 0009b000 fd:03 2760721                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/groupby.cpython-34m.so
+7ff4b4c48000-7ff4b4c4e000 rw-p 0009c000 fd:03 2760721                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/groupby.cpython-34m.so
+7ff4b4c4e000-7ff4b4c8f000 rw-p 00000000 00:00 0 
+7ff4b4c8f000-7ff4b4d2f000 r-xp 00000000 fd:03 2760718                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/window.cpython-34m.so
+7ff4b4d2f000-7ff4b4f2e000 ---p 000a0000 fd:03 2760718                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/window.cpython-34m.so
+7ff4b4f2e000-7ff4b4f2f000 r--p 0009f000 fd:03 2760718                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/window.cpython-34m.so
+7ff4b4f2f000-7ff4b4f37000 rw-p 000a0000 fd:03 2760718                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/window.cpython-34m.so
+7ff4b4f37000-7ff4b4f78000 rw-p 00000000 00:00 0 
+7ff4b4f78000-7ff4b4f8e000 r-xp 00000000 fd:03 1835019                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7ff4b4f8e000-7ff4b518d000 ---p 00016000 fd:03 1835019                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7ff4b518d000-7ff4b518e000 rw-p 00015000 fd:03 1835019                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7ff4b518e000-7ff4b5274000 r-xp 00000000 fd:03 917888                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7ff4b5274000-7ff4b5473000 ---p 000e6000 fd:03 917888                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7ff4b5473000-7ff4b547b000 r--p 000e5000 fd:03 917888                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7ff4b547b000-7ff4b547d000 rw-p 000ed000 fd:03 917888                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7ff4b547d000-7ff4b5492000 rw-p 00000000 00:00 0 
+7ff4b5492000-7ff4b54c0000 r-xp 00000000 fd:03 2762259                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_path.cpython-34m.so
+7ff4b54c0000-7ff4b56c0000 ---p 0002e000 fd:03 2762259                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_path.cpython-34m.so
+7ff4b56c0000-7ff4b56c1000 rw-p 0002e000 fd:03 2762259                    /root/dj_test/myvenv/lib/python3.4/site-packages/matplotlib/_path.cpython-34m.so
+7ff4b56c1000-7ff4b59c2000 rw-p 00000000 00:00 0 
+7ff4b59c2000-7ff4b59c7000 r-xp 00000000 fd:03 919397                     /usr/lib/python3.4/lib-dynload/mmap.cpython-34m-x86_64-linux-gnu.so
+7ff4b59c7000-7ff4b5bc6000 ---p 00005000 fd:03 919397                     /usr/lib/python3.4/lib-dynload/mmap.cpython-34m-x86_64-linux-gnu.so
+7ff4b5bc6000-7ff4b5bc7000 r--p 00004000 fd:03 919397                     /usr/lib/python3.4/lib-dynload/mmap.cpython-34m-x86_64-linux-gnu.so
+7ff4b5bc7000-7ff4b5bc8000 rw-p 00005000 fd:03 919397                     /usr/lib/python3.4/lib-dynload/mmap.cpython-34m-x86_64-linux-gnu.so
+7ff4b5bc8000-7ff4b5c08000 rw-p 00000000 00:00 0 
+7ff4b5c08000-7ff4b5cf0000 r-xp 00000000 fd:03 2760708                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/sparse.cpython-34m.so
+7ff4b5cf0000-7ff4b5eef000 ---p 000e8000 fd:03 2760708                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/sparse.cpython-34m.so
+7ff4b5eef000-7ff4b5ef0000 r--p 000e7000 fd:03 2760708                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/sparse.cpython-34m.so
+7ff4b5ef0000-7ff4b5ef5000 rw-p 000e8000 fd:03 2760708                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/sparse.cpython-34m.so
+7ff4b5ef5000-7ff4b5ff6000 rw-p 00000000 00:00 0 
+7ff4b5ff6000-7ff4b6052000 r-xp 00000000 fd:03 2760712                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/period.cpython-34m.so
+7ff4b6052000-7ff4b6252000 ---p 0005c000 fd:03 2760712                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/period.cpython-34m.so
+7ff4b6252000-7ff4b6253000 r--p 0005c000 fd:03 2760712                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/period.cpython-34m.so
+7ff4b6253000-7ff4b625a000 rw-p 0005d000 fd:03 2760712                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/period.cpython-34m.so
+7ff4b625a000-7ff4b629b000 rw-p 00000000 00:00 0 
+7ff4b629b000-7ff4b62aa000 r-xp 00000000 fd:03 2760731                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/frequencies.cpython-34m.so
+7ff4b62aa000-7ff4b64a9000 ---p 0000f000 fd:03 2760731                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/frequencies.cpython-34m.so
+7ff4b64a9000-7ff4b64aa000 r--p 0000e000 fd:03 2760731                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/frequencies.cpython-34m.so
+7ff4b64aa000-7ff4b64ac000 rw-p 0000f000 fd:03 2760731                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/frequencies.cpython-34m.so
+7ff4b64ac000-7ff4b64ef000 r-xp 00000000 fd:03 2760726                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/strptime.cpython-34m.so
+7ff4b64ef000-7ff4b66ef000 ---p 00043000 fd:03 2760726                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/strptime.cpython-34m.so
+7ff4b66ef000-7ff4b66f0000 r--p 00043000 fd:03 2760726                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/strptime.cpython-34m.so
+7ff4b66f0000-7ff4b66f5000 rw-p 00044000 fd:03 2760726                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/strptime.cpython-34m.so
+7ff4b66f5000-7ff4b67f6000 rw-p 00000000 00:00 0 
+7ff4b67f6000-7ff4b69fb000 r-xp 00000000 fd:03 2760713                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/join.cpython-34m.so
+7ff4b69fb000-7ff4b6bfa000 ---p 00205000 fd:03 2760713                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/join.cpython-34m.so
+7ff4b6bfa000-7ff4b6bfb000 r--p 00204000 fd:03 2760713                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/join.cpython-34m.so
+7ff4b6bfb000-7ff4b6c04000 rw-p 00205000 fd:03 2760713                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/join.cpython-34m.so
+7ff4b6c04000-7ff4b6c05000 rw-p 00000000 00:00 0 
+7ff4b6c05000-7ff4b6c76000 r-xp 00000000 fd:03 2760716                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/index.cpython-34m.so
+7ff4b6c76000-7ff4b6e75000 ---p 00071000 fd:03 2760716                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/index.cpython-34m.so
+7ff4b6e75000-7ff4b6e76000 r--p 00070000 fd:03 2760716                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/index.cpython-34m.so
+7ff4b6e76000-7ff4b6e7c000 rw-p 00071000 fd:03 2760716                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/index.cpython-34m.so
+7ff4b6e7c000-7ff4b6f3d000 rw-p 00000000 00:00 0 
+7ff4b6f3d000-7ff4b6f4a000 r-xp 00000000 fd:03 2760705                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/hashing.cpython-34m.so
+7ff4b6f4a000-7ff4b7149000 ---p 0000d000 fd:03 2760705                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/hashing.cpython-34m.so
+7ff4b7149000-7ff4b714a000 r--p 0000c000 fd:03 2760705                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/hashing.cpython-34m.so
+7ff4b714a000-7ff4b714b000 rw-p 0000d000 fd:03 2760705                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/hashing.cpython-34m.so
+7ff4b714b000-7ff4b714c000 rw-p 00000000 00:00 0 
+7ff4b714c000-7ff4b715a000 r-xp 00000000 fd:03 2760706                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/properties.cpython-34m.so
+7ff4b715a000-7ff4b7359000 ---p 0000e000 fd:03 2760706                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/properties.cpython-34m.so
+7ff4b7359000-7ff4b735a000 r--p 0000d000 fd:03 2760706                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/properties.cpython-34m.so
+7ff4b735a000-7ff4b735b000 rw-p 0000e000 fd:03 2760706                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/properties.cpython-34m.so
+7ff4b735b000-7ff4b73dc000 rw-p 00000000 00:00 0 
+7ff4b73dc000-7ff4b752f000 r-xp 00000000 fd:03 2760707                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/algos.cpython-34m.so
+7ff4b752f000-7ff4b772e000 ---p 00153000 fd:03 2760707                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/algos.cpython-34m.so
+7ff4b772e000-7ff4b772f000 r--p 00152000 fd:03 2760707                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/algos.cpython-34m.so
+7ff4b772f000-7ff4b773b000 rw-p 00153000 fd:03 2760707                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/algos.cpython-34m.so
+7ff4b773b000-7ff4b77bd000 rw-p 00000000 00:00 0 
+7ff4b77bd000-7ff4b7957000 r-xp 00000000 fd:03 2760715                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/interval.cpython-34m.so
+7ff4b7957000-7ff4b7b56000 ---p 0019a000 fd:03 2760715                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/interval.cpython-34m.so
+7ff4b7b56000-7ff4b7b57000 r--p 00199000 fd:03 2760715                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/interval.cpython-34m.so
+7ff4b7b57000-7ff4b7b64000 rw-p 0019a000 fd:03 2760715                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/interval.cpython-34m.so
+7ff4b7b64000-7ff4b7b65000 rw-p 00000000 00:00 0 
+7ff4b7b65000-7ff4b7c68000 r-xp 00000000 fd:03 2760710                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/lib.cpython-34m.so
+7ff4b7c68000-7ff4b7e67000 ---p 00103000 fd:03 2760710                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/lib.cpython-34m.so
+7ff4b7e67000-7ff4b7e68000 r--p 00102000 fd:03 2760710                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/lib.cpython-34m.so
+7ff4b7e68000-7ff4b7e78000 rw-p 00103000 fd:03 2760710                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/lib.cpython-34m.so
+7ff4b7e78000-7ff4b7e7b000 rw-p 00000000 00:00 0 
+7ff4b7e7b000-7ff4b7f07000 r-xp 00000000 fd:03 2760711                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/hashtable.cpython-34m.so
+7ff4b7f07000-7ff4b8106000 ---p 0008c000 fd:03 2760711                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/hashtable.cpython-34m.so
+7ff4b8106000-7ff4b8107000 r--p 0008b000 fd:03 2760711                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/hashtable.cpython-34m.so
+7ff4b8107000-7ff4b810f000 rw-p 0008c000 fd:03 2760711                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/hashtable.cpython-34m.so
+7ff4b810f000-7ff4b8110000 rw-p 00000000 00:00 0 
+7ff4b8110000-7ff4b8131000 r-xp 00000000 fd:03 2760728                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/fields.cpython-34m.so
+7ff4b8131000-7ff4b8331000 ---p 00021000 fd:03 2760728                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/fields.cpython-34m.so
+7ff4b8331000-7ff4b8332000 r--p 00021000 fd:03 2760728                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/fields.cpython-34m.so
+7ff4b8332000-7ff4b8334000 rw-p 00022000 fd:03 2760728                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/fields.cpython-34m.so
+7ff4b8334000-7ff4b8374000 rw-p 00000000 00:00 0 
+7ff4b8374000-7ff4b83b6000 r-xp 00000000 fd:03 2760729                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/parsing.cpython-34m.so
+7ff4b83b6000-7ff4b85b5000 ---p 00042000 fd:03 2760729                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/parsing.cpython-34m.so
+7ff4b85b5000-7ff4b85b6000 r--p 00041000 fd:03 2760729                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/parsing.cpython-34m.so
+7ff4b85b6000-7ff4b85bb000 rw-p 00042000 fd:03 2760729                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/parsing.cpython-34m.so
+7ff4b85bb000-7ff4b85bc000 rw-p 00000000 00:00 0 
+7ff4b85bc000-7ff4b85d7000 r-xp 00000000 fd:03 2760725                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/timezones.cpython-34m.so
+7ff4b85d7000-7ff4b87d6000 ---p 0001b000 fd:03 2760725                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/timezones.cpython-34m.so
+7ff4b87d6000-7ff4b87d7000 r--p 0001a000 fd:03 2760725                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/timezones.cpython-34m.so
+7ff4b87d7000-7ff4b87d9000 rw-p 0001b000 fd:03 2760725                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/timezones.cpython-34m.so
+7ff4b87d9000-7ff4b87e9000 r-xp 00000000 fd:03 2760727                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/timedeltas.cpython-34m.so
+7ff4b87e9000-7ff4b89e8000 ---p 00010000 fd:03 2760727                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/timedeltas.cpython-34m.so
+7ff4b89e8000-7ff4b89e9000 r--p 0000f000 fd:03 2760727                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/timedeltas.cpython-34m.so
+7ff4b89e9000-7ff4b89eb000 rw-p 00010000 fd:03 2760727                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslibs/timedeltas.cpython-34m.so
+7ff4b89eb000-7ff4b8b0d000 r-xp 00000000 fd:03 2760719                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslib.cpython-34m.so
+7ff4b8b0d000-7ff4b8d0c000 ---p 00122000 fd:03 2760719                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslib.cpython-34m.so
+7ff4b8d0c000-7ff4b8d0d000 r--p 00121000 fd:03 2760719                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslib.cpython-34m.so
+7ff4b8d0d000-7ff4b8d1c000 rw-p 00122000 fd:03 2760719                    /root/dj_test/myvenv/lib/python3.4/site-packages/pandas/_libs/tslib.cpython-34m.so
+7ff4b8d1c000-7ff4b8ddf000 rw-p 00000000 00:00 0 
+7ff4b8ddf000-7ff4b8e9b000 r-xp 00000000 fd:03 2759916                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/random/mtrand.cpython-34m.so
+7ff4b8e9b000-7ff4b909b000 ---p 000bc000 fd:03 2759916                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/random/mtrand.cpython-34m.so
+7ff4b909b000-7ff4b90c0000 rw-p 000bc000 fd:03 2759916                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/random/mtrand.cpython-34m.so
+7ff4b90c0000-7ff4b9102000 rw-p 00000000 00:00 0 
+7ff4b9102000-7ff4b910b000 r-xp 00000000 fd:03 2759969                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/fft/fftpack_lite.cpython-34m.so
+7ff4b910b000-7ff4b930a000 ---p 00009000 fd:03 2759969                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/fft/fftpack_lite.cpython-34m.so
+7ff4b930a000-7ff4b930b000 rw-p 00008000 fd:03 2759969                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/fft/fftpack_lite.cpython-34m.so
+7ff4b930b000-7ff4b938b000 rw-p 00000000 00:00 0 
+7ff4b938b000-7ff4b93b4000 r-xp 00000000 fd:03 2759671                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/linalg/_umath_linalg.cpython-34m.so
+7ff4b93b4000-7ff4b95b3000 ---p 00029000 fd:03 2759671                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/linalg/_umath_linalg.cpython-34m.so
+7ff4b95b3000-7ff4b95b8000 rw-p 00028000 fd:03 2759671                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/linalg/_umath_linalg.cpython-34m.so
+7ff4b95b8000-7ff4b95bc000 r-xp 00000000 fd:03 2759669                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/linalg/lapack_lite.cpython-34m.so
+7ff4b95bc000-7ff4b97bc000 ---p 00004000 fd:03 2759669                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/linalg/lapack_lite.cpython-34m.so
+7ff4b97bc000-7ff4b97bf000 rw-p 00004000 fd:03 2759669                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/linalg/lapack_lite.cpython-34m.so
+7ff4b97bf000-7ff4b97ff000 rw-p 00000000 00:00 0 
+7ff4b97ff000-7ff4bb7ff000 rw-p 00000000 00:00 0 
+7ff4bb7ff000-7ff4bb800000 ---p 00000000 00:00 0 
+7ff4bb800000-7ff4bc000000 rw-p 00000000 00:00 0                          [stack:15483]
+7ff4bc000000-7ff4bd1e6000 rw-p 00000000 00:00 0 
+7ff4bd1e6000-7ff4c0000000 ---p 00000000 00:00 0 
+7ff4c0009000-7ff4c0030000 r--p 00000000 fd:03 1051096                    /usr/share/locale-langpack/ko/LC_MESSAGES/libc.mo
+7ff4c0030000-7ff4c0130000 rw-p 00000000 00:00 0 
+7ff4c0130000-7ff4c02c1000 r-xp 00000000 fd:03 2760311                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/core/umath.cpython-34m.so
+7ff4c02c1000-7ff4c04c1000 ---p 00191000 fd:03 2760311                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/core/umath.cpython-34m.so
+7ff4c04c1000-7ff4c04c7000 rw-p 00191000 fd:03 2760311                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/core/umath.cpython-34m.so
+7ff4c04c7000-7ff4c0509000 rw-p 00000000 00:00 0 
+7ff4c0509000-7ff4c05f9000 r-xp 00000000 fd:03 2759946                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/.libs/libgfortran-ed201abd.so.3.0.0
+7ff4c05f9000-7ff4c07f8000 ---p 000f0000 fd:03 2759946                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/.libs/libgfortran-ed201abd.so.3.0.0
+7ff4c07f8000-7ff4c07fa000 rw-p 000ef000 fd:03 2759946                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/.libs/libgfortran-ed201abd.so.3.0.0
+7ff4c07fa000-7ff4c07fb000 rw-p 00000000 00:00 0 
+7ff4c07fb000-7ff4c0803000 rw-p 000f2000 fd:03 2759946                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/.libs/libgfortran-ed201abd.so.3.0.0
+7ff4c0803000-7ff4c2b17000 r-xp 00000000 fd:03 2759947                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/.libs/libopenblasp-r0-39a31c03.2.18.so
+7ff4c2b17000-7ff4c2d16000 ---p 02314000 fd:03 2759947                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/.libs/libopenblasp-r0-39a31c03.2.18.so
+7ff4c2d16000-7ff4c2d35000 rw-p 02313000 fd:03 2759947                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/.libs/libopenblasp-r0-39a31c03.2.18.so
+7ff4c2d35000-7ff4c2d98000 rw-p 00000000 00:00 0 
+7ff4c2d98000-7ff4c2e2e000 rw-p 02425000 fd:03 2759947                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/.libs/libopenblasp-r0-39a31c03.2.18.so
+7ff4c2e2e000-7ff4c3006000 r-xp 00000000 fd:03 2760322                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/core/multiarray.cpython-34m.so
+7ff4c3006000-7ff4c3206000 ---p 001d8000 fd:03 2760322                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/core/multiarray.cpython-34m.so
+7ff4c3206000-7ff4c321f000 rw-p 001d8000 fd:03 2760322                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/core/multiarray.cpython-34m.so
+7ff4c321f000-7ff4c3237000 rw-p 00000000 00:00 0 
+7ff4c3237000-7ff4c323d000 rw-p 001f2000 fd:03 2760322                    /root/dj_test/myvenv/lib/python3.4/site-packages/numpy/core/multiarray.cpython-34m.so
+7ff4c323d000-7ff4c3243000 r-xp 00000000 fd:03 919398                     /usr/lib/python3.4/lib-dynload/_csv.cpython-34m-x86_64-linux-gnu.so
+7ff4c3243000-7ff4c3442000 ---p 00006000 fd:03 919398                     /usr/lib/python3.4/lib-dynload/_csv.cpython-34m-x86_64-linux-gnu.so
+7ff4c3442000-7ff4c3443000 r--p 00005000 fd:03 919398                     /usr/lib/python3.4/lib-dynload/_csv.cpython-34m-x86_64-linux-gnu.so
+7ff4c3443000-7ff4c3445000 rw-p 00006000 fd:03 919398                     /usr/lib/python3.4/lib-dynload/_csv.cpython-34m-x86_64-linux-gnu.so
+7ff4c3445000-7ff4c3485000 rw-p 00000000 00:00 0 
+7ff4c3485000-7ff4c3486000 ---p 00000000 00:00 0 
+7ff4c3486000-7ff4c3dc6000 rw-p 00000000 00:00 0                          [stack:15479]
+7ff4c3dc6000-7ff4c3e01000 r-xp 00000000 fd:03 2884152                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libsepol-b4f5b513.so.1
+7ff4c3e01000-7ff4c4001000 ---p 0003b000 fd:03 2884152                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libsepol-b4f5b513.so.1
+7ff4c4001000-7ff4c4002000 rw-p 0003b000 fd:03 2884152                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libsepol-b4f5b513.so.1
+7ff4c4002000-7ff4c400c000 rw-p 00000000 00:00 0 
+7ff4c400c000-7ff4c400e000 rw-p 0003c000 fd:03 2884152                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libsepol-b4f5b513.so.1
+7ff4c400e000-7ff4c4017000 r-xp 00000000 fd:03 1847291                    /lib/x86_64-linux-gnu/libcrypt-2.19.so
+7ff4c4017000-7ff4c4217000 ---p 00009000 fd:03 1847291                    /lib/x86_64-linux-gnu/libcrypt-2.19.so
+7ff4c4217000-7ff4c4218000 r--p 00009000 fd:03 1847291                    /lib/x86_64-linux-gnu/libcrypt-2.19.so
+7ff4c4218000-7ff4c4219000 rw-p 0000a000 fd:03 1847291                    /lib/x86_64-linux-gnu/libcrypt-2.19.so
+7ff4c4219000-7ff4c4247000 rw-p 00000000 00:00 0 
+7ff4c4247000-7ff4c425d000 r-xp 00000000 fd:03 2884150                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libselinux-cf8f9094.so.1
+7ff4c425d000-7ff4c445c000 ---p 00016000 fd:03 2884150                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libselinux-cf8f9094.so.1
+7ff4c445c000-7ff4c445e000 rw-p 00015000 fd:03 2884150                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libselinux-cf8f9094.so.1
+7ff4c445e000-7ff4c445f000 rw-p 00000000 00:00 0 
+7ff4c445f000-7ff4c4463000 rw-p 00017000 fd:03 2884150                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libselinux-cf8f9094.so.1
+7ff4c4463000-7ff4c447b000 r-xp 00000000 fd:03 2884160                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libsasl2-e96a0dbf.so.2.0.22
+7ff4c447b000-7ff4c467b000 ---p 00018000 fd:03 2884160                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libsasl2-e96a0dbf.so.2.0.22
+7ff4c467b000-7ff4c467c000 rw-p 00018000 fd:03 2884160                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libsasl2-e96a0dbf.so.2.0.22
+7ff4c467c000-7ff4c467e000 rw-p 0001a000 fd:03 2884160                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libsasl2-e96a0dbf.so.2.0.22
+7ff4c467e000-7ff4c468b000 r-xp 00000000 fd:03 2884154                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/liblber-2-d7edd0dc.4.so.2.10.7
+7ff4c468b000-7ff4c488b000 ---p 0000d000 fd:03 2884154                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/liblber-2-d7edd0dc.4.so.2.10.7
+7ff4c488b000-7ff4c488d000 rw-p 0000d000 fd:03 2884154                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/liblber-2-d7edd0dc.4.so.2.10.7
+7ff4c488d000-7ff4c488f000 r-xp 00000000 fd:03 2884161                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libkeyutils-1-ff31573b.2.so
+7ff4c488f000-7ff4c4a8e000 ---p 00002000 fd:03 2884161                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libkeyutils-1-ff31573b.2.so
+7ff4c4a8e000-7ff4c4a90000 rw-p 00001000 fd:03 2884161                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libkeyutils-1-ff31573b.2.so
+7ff4c4a90000-7ff4c4a98000 r-xp 00000000 fd:03 2884153                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libkrb5support-d7ce89d4.so.0.1
+7ff4c4a98000-7ff4c4c97000 ---p 00008000 fd:03 2884153                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libkrb5support-d7ce89d4.so.0.1
+7ff4c4c97000-7ff4c4c98000 rw-p 00007000 fd:03 2884153                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libkrb5support-d7ce89d4.so.0.1
+7ff4c4c98000-7ff4c4c9b000 rw-p 00009000 fd:03 2884153                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libkrb5support-d7ce89d4.so.0.1
+7ff4c4c9b000-7ff4c4cb2000 r-xp 00000000 fd:03 1835249                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7ff4c4cb2000-7ff4c4eb2000 ---p 00017000 fd:03 1835249                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7ff4c4eb2000-7ff4c4eb3000 r--p 00017000 fd:03 1835249                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7ff4c4eb3000-7ff4c4eb4000 rw-p 00018000 fd:03 1835249                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7ff4c4eb4000-7ff4c4eb6000 rw-p 00000000 00:00 0 
+7ff4c4eb6000-7ff4c4eda000 r-xp 00000000 fd:03 2884158                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libk5crypto-622ef25b.so.3.1
+7ff4c4eda000-7ff4c50d9000 ---p 00024000 fd:03 2884158                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libk5crypto-622ef25b.so.3.1
+7ff4c50d9000-7ff4c50df000 rw-p 00023000 fd:03 2884158                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libk5crypto-622ef25b.so.3.1
+7ff4c50df000-7ff4c50e1000 r-xp 00000000 fd:03 2884151                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libcom_err-beb60336.so.2.1
+7ff4c50e1000-7ff4c52e0000 ---p 00002000 fd:03 2884151                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libcom_err-beb60336.so.2.1
+7ff4c52e0000-7ff4c52e2000 rw-p 00001000 fd:03 2884151                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libcom_err-beb60336.so.2.1
+7ff4c52e2000-7ff4c5373000 r-xp 00000000 fd:03 2884162                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libkrb5-fb0d2caa.so.3.3
+7ff4c5373000-7ff4c5573000 ---p 00091000 fd:03 2884162                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libkrb5-fb0d2caa.so.3.3
+7ff4c5573000-7ff4c5577000 rw-p 00091000 fd:03 2884162                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libkrb5-fb0d2caa.so.3.3
+7ff4c5577000-7ff4c5596000 rw-p 00096000 fd:03 2884162                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libkrb5-fb0d2caa.so.3.3
+7ff4c5596000-7ff4c55e4000 r-xp 00000000 fd:03 2884159                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libldap_r-2-41a2533b.4.so.2.10.7
+7ff4c55e4000-7ff4c57e4000 ---p 0004e000 fd:03 2884159                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libldap_r-2-41a2533b.4.so.2.10.7
+7ff4c57e4000-7ff4c57e7000 rw-p 0004e000 fd:03 2884159                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libldap_r-2-41a2533b.4.so.2.10.7
+7ff4c57e7000-7ff4c57e9000 rw-p 00000000 00:00 0 
+7ff4c57e9000-7ff4c57fe000 rw-p 00051000 fd:03 2884159                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libldap_r-2-41a2533b.4.so.2.10.7
+7ff4c57fe000-7ff4c582a000 r-xp 00000000 fd:03 2884155                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libgssapi_krb5-174f8956.so.2.2
+7ff4c582a000-7ff4c5a2a000 ---p 0002c000 fd:03 2884155                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libgssapi_krb5-174f8956.so.2.2
+7ff4c5a2a000-7ff4c5a39000 rw-p 0002c000 fd:03 2884155                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libgssapi_krb5-174f8956.so.2.2
+7ff4c5a39000-7ff4c5c5f000 r-xp 00000000 fd:03 2884149                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libcrypto-1e9dee74.so.1.0.2n
+7ff4c5c5f000-7ff4c5e5e000 ---p 00226000 fd:03 2884149                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libcrypto-1e9dee74.so.1.0.2n
+7ff4c5e5e000-7ff4c5e85000 rw-p 00225000 fd:03 2884149                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libcrypto-1e9dee74.so.1.0.2n
+7ff4c5e85000-7ff4c5e88000 rw-p 00000000 00:00 0 
+7ff4c5e88000-7ff4c5eb9000 rw-p 0024c000 fd:03 2884149                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libcrypto-1e9dee74.so.1.0.2n
+7ff4c5eb9000-7ff4c5f25000 r-xp 00000000 fd:03 2884163                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libssl-3309e9a3.so.1.0.2n
+7ff4c5f25000-7ff4c6124000 ---p 0006c000 fd:03 2884163                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libssl-3309e9a3.so.1.0.2n
+7ff4c6124000-7ff4c612f000 rw-p 0006b000 fd:03 2884163                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libssl-3309e9a3.so.1.0.2n
+7ff4c612f000-7ff4c6154000 rw-p 00077000 fd:03 2884163                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libssl-3309e9a3.so.1.0.2n
+7ff4c6154000-7ff4c6197000 r-xp 00000000 fd:03 2884157                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libpq-389351b6.so.5.10
+7ff4c6197000-7ff4c6397000 ---p 00043000 fd:03 2884157                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libpq-389351b6.so.5.10
+7ff4c6397000-7ff4c639a000 rw-p 00043000 fd:03 2884157                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libpq-389351b6.so.5.10
+7ff4c639a000-7ff4c63a4000 rw-p 00047000 fd:03 2884157                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/.libs/libpq-389351b6.so.5.10
+7ff4c63a4000-7ff4c63d5000 r-xp 00000000 fd:03 2763060                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/_psycopg.cpython-34m.so
+7ff4c63d5000-7ff4c65d4000 ---p 00031000 fd:03 2763060                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/_psycopg.cpython-34m.so
+7ff4c65d4000-7ff4c65db000 rw-p 00030000 fd:03 2763060                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/_psycopg.cpython-34m.so
+7ff4c65db000-7ff4c65df000 rw-p 000fd000 fd:03 2763060                    /root/dj_test/myvenv/lib/python3.4/site-packages/psycopg2/_psycopg.cpython-34m.so
+7ff4c65df000-7ff4c661f000 rw-p 00000000 00:00 0 
+7ff4c661f000-7ff4c66d3000 r-xp 00000000 fd:03 918196                     /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+7ff4c66d3000-7ff4c68d3000 ---p 000b4000 fd:03 918196                     /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+7ff4c68d3000-7ff4c68d5000 r--p 000b4000 fd:03 918196                     /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+7ff4c68d5000-7ff4c68d7000 rw-p 000b6000 fd:03 918196                     /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+7ff4c68d7000-7ff4c68d8000 rw-p 00000000 00:00 0 
+7ff4c68d8000-7ff4c68e8000 r-xp 00000000 fd:03 919413                     /usr/lib/python3.4/lib-dynload/_sqlite3.cpython-34m-x86_64-linux-gnu.so
+7ff4c68e8000-7ff4c6ae8000 ---p 00010000 fd:03 919413                     /usr/lib/python3.4/lib-dynload/_sqlite3.cpython-34m-x86_64-linux-gnu.so
+7ff4c6ae8000-7ff4c6ae9000 r--p 00010000 fd:03 919413                     /usr/lib/python3.4/lib-dynload/_sqlite3.cpython-34m-x86_64-linux-gnu.so
+7ff4c6ae9000-7ff4c6aec000 rw-p 00011000 fd:03 919413                     /usr/lib/python3.4/lib-dynload/_sqlite3.cpython-34m-x86_64-linux-gnu.so
+7ff4c6aed000-7ff4c706d000 rw-p 00000000 00:00 0 
+7ff4c706d000-7ff4c7071000 r-xp 00000000 fd:03 2885554                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libwebpdemux-c8ebe823.so.2.0.3
+7ff4c7071000-7ff4c7270000 ---p 00004000 fd:03 2885554                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libwebpdemux-c8ebe823.so.2.0.3
+7ff4c7270000-7ff4c7271000 rw-p 00003000 fd:03 2885554                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libwebpdemux-c8ebe823.so.2.0.3
+7ff4c7271000-7ff4c7273000 rw-p 00016000 fd:03 2885554                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libwebpdemux-c8ebe823.so.2.0.3
+7ff4c7273000-7ff4c727c000 r-xp 00000000 fd:03 2885552                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libwebpmux-26347042.so.3.0.1
+7ff4c727c000-7ff4c747c000 ---p 00009000 fd:03 2885552                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libwebpmux-26347042.so.3.0.1
+7ff4c747c000-7ff4c747d000 rw-p 00009000 fd:03 2885552                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libwebpmux-26347042.so.3.0.1
+7ff4c747d000-7ff4c747f000 rw-p 00033000 fd:03 2885552                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libwebpmux-26347042.so.3.0.1
+7ff4c747f000-7ff4c74e5000 r-xp 00000000 fd:03 2885555                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libwebp-186dc9a0.so.7.0.1
+7ff4c74e5000-7ff4c76e4000 ---p 00066000 fd:03 2885555                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libwebp-186dc9a0.so.7.0.1
+7ff4c76e4000-7ff4c76e5000 rw-p 00065000 fd:03 2885555                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libwebp-186dc9a0.so.7.0.1
+7ff4c76e5000-7ff4c76e7000 rw-p 00000000 00:00 0 
+7ff4c76e7000-7ff4c76e8000 rw-p 00347000 fd:03 2885555                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libwebp-186dc9a0.so.7.0.1
+7ff4c76e8000-7ff4c76ec000 r-xp 00000000 fd:03 2885404                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/_webp.cpython-34m.so
+7ff4c76ec000-7ff4c78ec000 ---p 00004000 fd:03 2885404                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/_webp.cpython-34m.so
+7ff4c78ec000-7ff4c78ed000 rw-p 00004000 fd:03 2885404                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/_webp.cpython-34m.so
+7ff4c78ed000-7ff4c78f1000 rw-p 00012000 fd:03 2885404                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/_webp.cpython-34m.so
+7ff4c78f1000-7ff4c7a31000 rw-p 00000000 00:00 0 
+7ff4c7a31000-7ff4c7a55000 r-xp 00000000 fd:03 2885547                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/liblzma-f444c404.so.5.2.2
+7ff4c7a55000-7ff4c7c55000 ---p 00024000 fd:03 2885547                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/liblzma-f444c404.so.5.2.2
+7ff4c7c55000-7ff4c7c56000 rw-p 00024000 fd:03 2885547                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/liblzma-f444c404.so.5.2.2
+7ff4c7c56000-7ff4c7c57000 rw-p 000d3000 fd:03 2885547                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/liblzma-f444c404.so.5.2.2
+7ff4c7c57000-7ff4c7c5e000 r-xp 00000000 fd:03 1847301                    /lib/x86_64-linux-gnu/librt-2.19.so
+7ff4c7c5e000-7ff4c7e5d000 ---p 00007000 fd:03 1847301                    /lib/x86_64-linux-gnu/librt-2.19.so
+7ff4c7e5d000-7ff4c7e5e000 r--p 00006000 fd:03 1847301                    /lib/x86_64-linux-gnu/librt-2.19.so
+7ff4c7e5e000-7ff4c7e5f000 rw-p 00007000 fd:03 1847301                    /lib/x86_64-linux-gnu/librt-2.19.so
+7ff4c7e5f000-7ff4c7ed2000 r-xp 00000000 fd:03 2885548                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libtiff-16d54532.so.5.3.0
+7ff4c7ed2000-7ff4c80d1000 ---p 00073000 fd:03 2885548                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libtiff-16d54532.so.5.3.0
+7ff4c80d1000-7ff4c80d5000 rw-p 00072000 fd:03 2885548                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libtiff-16d54532.so.5.3.0
+7ff4c80d5000-7ff4c80dd000 rw-p 001ac000 fd:03 2885548                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libtiff-16d54532.so.5.3.0
+7ff4c80dd000-7ff4c80f1000 r-xp 00000000 fd:03 2885551                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libz-a147dcb0.so.1.2.3
+7ff4c80f1000-7ff4c82f0000 ---p 00014000 fd:03 2885551                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libz-a147dcb0.so.1.2.3
+7ff4c82f0000-7ff4c82f1000 rw-p 00013000 fd:03 2885551                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libz-a147dcb0.so.1.2.3
+7ff4c82f1000-7ff4c82f2000 rw-p 00015000 fd:03 2885551                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libz-a147dcb0.so.1.2.3
+7ff4c82f2000-7ff4c8339000 r-xp 00000000 fd:03 2885545                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libopenjp2-59185378.so.2.1.0
+7ff4c8339000-7ff4c8539000 ---p 00047000 fd:03 2885545                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libopenjp2-59185378.so.2.1.0
+7ff4c8539000-7ff4c853b000 rw-p 00047000 fd:03 2885545                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libopenjp2-59185378.so.2.1.0
+7ff4c853b000-7ff4c853d000 rw-p 00052000 fd:03 2885545                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libopenjp2-59185378.so.2.1.0
+7ff4c853d000-7ff4c8577000 r-xp 00000000 fd:03 2885549                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libjpeg-bcb94a84.so.9.2.0
+7ff4c8577000-7ff4c8777000 ---p 0003a000 fd:03 2885549                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libjpeg-bcb94a84.so.9.2.0
+7ff4c8777000-7ff4c8778000 rw-p 0003a000 fd:03 2885549                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libjpeg-bcb94a84.so.9.2.0
+7ff4c8778000-7ff4c877a000 rw-p 00146000 fd:03 2885549                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/.libs/libjpeg-bcb94a84.so.9.2.0
+7ff4c877a000-7ff4c87f3000 r-xp 00000000 fd:03 2885413                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/_imaging.cpython-34m.so
+7ff4c87f3000-7ff4c89f2000 ---p 00079000 fd:03 2885413                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/_imaging.cpython-34m.so
+7ff4c89f2000-7ff4c89f9000 rw-p 00078000 fd:03 2885413                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/_imaging.cpython-34m.so
+7ff4c89f9000-7ff4c8a08000 rw-p 001fb000 fd:03 2885413                    /root/dj_test/myvenv/lib/python3.4/site-packages/PIL/_imaging.cpython-34m.so
+7ff4c8a08000-7ff4c8b08000 rw-p 00000000 00:00 0 
+7ff4c8b08000-7ff4c8b0a000 r-xp 00000000 fd:03 2762954                    /root/dj_test/myvenv/lib/python3.4/site-packages/markupsafe/_speedups.cpython-34m.so
+7ff4c8b0a000-7ff4c8d09000 ---p 00002000 fd:03 2762954                    /root/dj_test/myvenv/lib/python3.4/site-packages/markupsafe/_speedups.cpython-34m.so
+7ff4c8d09000-7ff4c8d0a000 r--p 00001000 fd:03 2762954                    /root/dj_test/myvenv/lib/python3.4/site-packages/markupsafe/_speedups.cpython-34m.so
+7ff4c8d0a000-7ff4c8d0b000 rw-p 00002000 fd:03 2762954                    /root/dj_test/myvenv/lib/python3.4/site-packages/markupsafe/_speedups.cpython-34m.so
+7ff4c8d0b000-7ff4c8e8b000 rw-p 00000000 00:00 0 
+7ff4c8e8b000-7ff4c8e8f000 r-xp 00000000 fd:03 1835303                    /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7ff4c8e8f000-7ff4c908e000 ---p 00004000 fd:03 1835303                    /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7ff4c908e000-7ff4c908f000 r--p 00003000 fd:03 1835303                    /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7ff4c908f000-7ff4c9090000 rw-p 00004000 fd:03 1835303                    /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7ff4c9090000-7ff4c9097000 r-xp 00000000 fd:03 918188                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7ff4c9097000-7ff4c9296000 ---p 00007000 fd:03 918188                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7ff4c9296000-7ff4c9297000 r--p 00006000 fd:03 918188                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7ff4c9297000-7ff4c9298000 rw-p 00007000 fd:03 918188                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7ff4c9298000-7ff4c92b0000 r-xp 00000000 fd:03 919382                     /usr/lib/python3.4/lib-dynload/_ctypes.cpython-34m-x86_64-linux-gnu.so
+7ff4c92b0000-7ff4c94af000 ---p 00018000 fd:03 919382                     /usr/lib/python3.4/lib-dynload/_ctypes.cpython-34m-x86_64-linux-gnu.so
+7ff4c94af000-7ff4c94b0000 r--p 00017000 fd:03 919382                     /usr/lib/python3.4/lib-dynload/_ctypes.cpython-34m-x86_64-linux-gnu.so
+7ff4c94b0000-7ff4c94b4000 rw-p 00018000 fd:03 919382                     /usr/lib/python3.4/lib-dynload/_ctypes.cpython-34m-x86_64-linux-gnu.so
+7ff4c94b4000-7ff4c9534000 rw-p 00000000 00:00 0 
+7ff4c9534000-7ff4c9589000 r-xp 00000000 fd:03 1835201                    /lib/x86_64-linux-gnu/libssl.so.1.0.0
+7ff4c9589000-7ff4c9789000 ---p 00055000 fd:03 1835201                    /lib/x86_64-linux-gnu/libssl.so.1.0.0
+7ff4c9789000-7ff4c978c000 r--p 00055000 fd:03 1835201                    /lib/x86_64-linux-gnu/libssl.so.1.0.0
+7ff4c978c000-7ff4c9793000 rw-p 00058000 fd:03 1835201                    /lib/x86_64-linux-gnu/libssl.so.1.0.0
+7ff4c9793000-7ff4c97a6000 r-xp 00000000 fd:03 918681                     /usr/lib/python3.4/lib-dynload/_ssl.cpython-34m-x86_64-linux-gnu.so
+7ff4c97a6000-7ff4c99a5000 ---p 00013000 fd:03 918681                     /usr/lib/python3.4/lib-dynload/_ssl.cpython-34m-x86_64-linux-gnu.so
+7ff4c99a5000-7ff4c99a6000 r--p 00012000 fd:03 918681                     /usr/lib/python3.4/lib-dynload/_ssl.cpython-34m-x86_64-linux-gnu.so
+7ff4c99a6000-7ff4c99aa000 rw-p 00013000 fd:03 918681                     /usr/lib/python3.4/lib-dynload/_ssl.cpython-34m-x86_64-linux-gnu.so
+7ff4c99aa000-7ff4c9a6a000 rw-p 00000000 00:00 0 
+7ff4c9a6b000-7ff4c9bab000 rw-p 00000000 00:00 0 
+7ff4c9bab000-7ff4c9bba000 r-xp 00000000 fd:03 1835175                    /lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7ff4c9bba000-7ff4c9db9000 ---p 0000f000 fd:03 1835175                    /lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7ff4c9db9000-7ff4c9dba000 r--p 0000e000 fd:03 1835175                    /lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7ff4c9dba000-7ff4c9dbb000 rw-p 0000f000 fd:03 1835175                    /lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7ff4c9dbb000-7ff4c9dbe000 r-xp 00000000 fd:03 919406                     /usr/lib/python3.4/lib-dynload/_bz2.cpython-34m-x86_64-linux-gnu.so
+7ff4c9dbe000-7ff4c9fbd000 ---p 00003000 fd:03 919406                     /usr/lib/python3.4/lib-dynload/_bz2.cpython-34m-x86_64-linux-gnu.so
+7ff4c9fbd000-7ff4c9fbe000 r--p 00002000 fd:03 919406                     /usr/lib/python3.4/lib-dynload/_bz2.cpython-34m-x86_64-linux-gnu.so
+7ff4c9fbe000-7ff4c9fbf000 rw-p 00003000 fd:03 919406                     /usr/lib/python3.4/lib-dynload/_bz2.cpython-34m-x86_64-linux-gnu.so
+7ff4c9fbf000-7ff4ca03f000 rw-p 00000000 00:00 0 
+7ff4ca03f000-7ff4ca1f2000 r-xp 00000000 fd:03 1835202                    /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+7ff4ca1f2000-7ff4ca3f1000 ---p 001b3000 fd:03 1835202                    /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+7ff4ca3f1000-7ff4ca40c000 r--p 001b2000 fd:03 1835202                    /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+7ff4ca40c000-7ff4ca417000 rw-p 001cd000 fd:03 1835202                    /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+7ff4ca417000-7ff4ca41b000 rw-p 00000000 00:00 0 
+7ff4ca41b000-7ff4ca420000 r-xp 00000000 fd:03 918680                     /usr/lib/python3.4/lib-dynload/_hashlib.cpython-34m-x86_64-linux-gnu.so
+7ff4ca420000-7ff4ca61f000 ---p 00005000 fd:03 918680                     /usr/lib/python3.4/lib-dynload/_hashlib.cpython-34m-x86_64-linux-gnu.so
+7ff4ca61f000-7ff4ca620000 r--p 00004000 fd:03 918680                     /usr/lib/python3.4/lib-dynload/_hashlib.cpython-34m-x86_64-linux-gnu.so
+7ff4ca620000-7ff4ca621000 rw-p 00005000 fd:03 918680                     /usr/lib/python3.4/lib-dynload/_hashlib.cpython-34m-x86_64-linux-gnu.so
+7ff4ca621000-7ff4ca62a000 r-xp 00000000 fd:03 919383                     /usr/lib/python3.4/lib-dynload/_json.cpython-34m-x86_64-linux-gnu.so
+7ff4ca62a000-7ff4ca829000 ---p 00009000 fd:03 919383                     /usr/lib/python3.4/lib-dynload/_json.cpython-34m-x86_64-linux-gnu.so
+7ff4ca829000-7ff4ca82a000 r--p 00008000 fd:03 919383                     /usr/lib/python3.4/lib-dynload/_json.cpython-34m-x86_64-linux-gnu.so
+7ff4ca82a000-7ff4ca82b000 rw-p 00009000 fd:03 919383                     /usr/lib/python3.4/lib-dynload/_json.cpython-34m-x86_64-linux-gnu.so
+7ff4ca82b000-7ff4ca8eb000 rw-p 00000000 00:00 0 
+7ff4ca8eb000-7ff4ca8ef000 r-xp 00000000 fd:03 919404                     /usr/lib/python3.4/lib-dynload/termios.cpython-34m-x86_64-linux-gnu.so
+7ff4ca8ef000-7ff4caaee000 ---p 00004000 fd:03 919404                     /usr/lib/python3.4/lib-dynload/termios.cpython-34m-x86_64-linux-gnu.so
+7ff4caaee000-7ff4caaef000 r--p 00003000 fd:03 919404                     /usr/lib/python3.4/lib-dynload/termios.cpython-34m-x86_64-linux-gnu.so
+7ff4caaef000-7ff4caaf1000 rw-p 00004000 fd:03 919404                     /usr/lib/python3.4/lib-dynload/termios.cpython-34m-x86_64-linux-gnu.so
+7ff4caaf1000-7ff4cac31000 rw-p 00000000 00:00 0 
+7ff4cac52000-7ff4cacd2000 rw-p 00000000 00:00 0 
+7ff4cacd2000-7ff4cacd3000 r-xp 00000000 fd:03 918683                     /usr/lib/python3.4/lib-dynload/_opcode.cpython-34m-x86_64-linux-gnu.so
+7ff4cacd3000-7ff4caed2000 ---p 00001000 fd:03 918683                     /usr/lib/python3.4/lib-dynload/_opcode.cpython-34m-x86_64-linux-gnu.so
+7ff4caed2000-7ff4caed3000 r--p 00000000 fd:03 918683                     /usr/lib/python3.4/lib-dynload/_opcode.cpython-34m-x86_64-linux-gnu.so
+7ff4caed3000-7ff4caed4000 rw-p 00001000 fd:03 918683                     /usr/lib/python3.4/lib-dynload/_opcode.cpython-34m-x86_64-linux-gnu.so
+7ff4caed4000-7ff4cafd4000 rw-p 00000000 00:00 0 
+7ff4cafd4000-7ff4cb3cd000 r--p 00000000 fd:03 922196                     /usr/lib/locale/locale-archive
+7ff4cb3cd000-7ff4cb4d2000 r-xp 00000000 fd:03 1847294                    /lib/x86_64-linux-gnu/libm-2.19.so
+7ff4cb4d2000-7ff4cb6d1000 ---p 00105000 fd:03 1847294                    /lib/x86_64-linux-gnu/libm-2.19.so
+7ff4cb6d1000-7ff4cb6d2000 r--p 00104000 fd:03 1847294                    /lib/x86_64-linux-gnu/libm-2.19.so
+7ff4cb6d2000-7ff4cb6d3000 rw-p 00105000 fd:03 1847294                    /lib/x86_64-linux-gnu/libm-2.19.so
+7ff4cb6d3000-7ff4cb6eb000 r-xp 00000000 fd:03 1835294                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7ff4cb6eb000-7ff4cb8ea000 ---p 00018000 fd:03 1835294                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7ff4cb8ea000-7ff4cb8eb000 r--p 00017000 fd:03 1835294                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7ff4cb8eb000-7ff4cb8ec000 rw-p 00018000 fd:03 1835294                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7ff4cb8ec000-7ff4cb913000 r-xp 00000000 fd:03 1835278                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7ff4cb913000-7ff4cbb13000 ---p 00027000 fd:03 1835278                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7ff4cbb13000-7ff4cbb15000 r--p 00027000 fd:03 1835278                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7ff4cbb15000-7ff4cbb16000 rw-p 00029000 fd:03 1835278                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7ff4cbb16000-7ff4cbb18000 r-xp 00000000 fd:03 1847307                    /lib/x86_64-linux-gnu/libutil-2.19.so
+7ff4cbb18000-7ff4cbd17000 ---p 00002000 fd:03 1847307                    /lib/x86_64-linux-gnu/libutil-2.19.so
+7ff4cbd17000-7ff4cbd18000 r--p 00001000 fd:03 1847307                    /lib/x86_64-linux-gnu/libutil-2.19.so
+7ff4cbd18000-7ff4cbd19000 rw-p 00002000 fd:03 1847307                    /lib/x86_64-linux-gnu/libutil-2.19.so
+7ff4cbd19000-7ff4cbd1c000 r-xp 00000000 fd:03 1847304                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7ff4cbd1c000-7ff4cbf1b000 ---p 00003000 fd:03 1847304                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7ff4cbf1b000-7ff4cbf1c000 r--p 00002000 fd:03 1847304                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7ff4cbf1c000-7ff4cbf1d000 rw-p 00003000 fd:03 1847304                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7ff4cbf1d000-7ff4cc0db000 r-xp 00000000 fd:03 1847308                    /lib/x86_64-linux-gnu/libc-2.19.so
+7ff4cc0db000-7ff4cc2db000 ---p 001be000 fd:03 1847308                    /lib/x86_64-linux-gnu/libc-2.19.so
+7ff4cc2db000-7ff4cc2df000 r--p 001be000 fd:03 1847308                    /lib/x86_64-linux-gnu/libc-2.19.so
+7ff4cc2df000-7ff4cc2e1000 rw-p 001c2000 fd:03 1847308                    /lib/x86_64-linux-gnu/libc-2.19.so
+7ff4cc2e1000-7ff4cc2e6000 rw-p 00000000 00:00 0 
+7ff4cc2e6000-7ff4cc2ff000 r-xp 00000000 fd:03 1847300                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7ff4cc2ff000-7ff4cc4fe000 ---p 00019000 fd:03 1847300                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7ff4cc4fe000-7ff4cc4ff000 r--p 00018000 fd:03 1847300                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7ff4cc4ff000-7ff4cc500000 rw-p 00019000 fd:03 1847300                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7ff4cc500000-7ff4cc504000 rw-p 00000000 00:00 0 
+7ff4cc504000-7ff4cc527000 r-xp 00000000 fd:03 1847297                    /lib/x86_64-linux-gnu/ld-2.19.so
+7ff4cc543000-7ff4cc552000 r--s 003aa000 fd:03 2759529                    /root/dj_test/myvenv/lib/python3.4/site-packages/konlpy/java/twitter-korean-text-2.4.3.jar
+7ff4cc552000-7ff4cc559000 r--s 0003c000 fd:03 2759526                    /root/dj_test/myvenv/lib/python3.4/site-packages/konlpy/java/snakeyaml-1.12.jar
+7ff4cc559000-7ff4cc599000 rw-p 00000000 00:00 0 
+7ff4cc59c000-7ff4cc59d000 r--s 00006000 fd:03 2759532                    /root/dj_test/myvenv/lib/python3.4/site-packages/konlpy/java/twitter-text-1.10.1.jar
+7ff4cc59d000-7ff4cc59e000 r--s 00001000 fd:03 2759530                    /root/dj_test/myvenv/lib/python3.4/site-packages/konlpy/java/shineware-ds-1.0.jar
+7ff4cc59e000-7ff4cc59f000 r--s 00004000 fd:03 2759524                    /root/dj_test/myvenv/lib/python3.4/site-packages/konlpy/java/shineware-common-2.0.jar
+7ff4cc59f000-7ff4cc5a0000 r--s 00006000 fd:03 2759525                    /root/dj_test/myvenv/lib/python3.4/site-packages/konlpy/java/komoran-2.4-e.jar
+7ff4cc5a0000-7ff4cc5a3000 r--s 0075b000 fd:03 2759528                    /root/dj_test/myvenv/lib/python3.4/site-packages/konlpy/java/kkma-2.0.jar
+7ff4cc5a3000-7ff4cc5a7000 r--s 00025000 fd:03 2759531                    /root/dj_test/myvenv/lib/python3.4/site-packages/konlpy/java/jhannanum-0.8.4.jar
+7ff4cc5a7000-7ff4cc5aa000 r--s 0000f000 fd:03 1071819                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+7ff4cc5aa000-7ff4cc5ae000 r--s 00085000 fd:03 1071817                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/localedata.jar
+7ff4cc5ae000-7ff4cc5b2000 r--s 00035000 fd:03 1071820                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+7ff4cc5b2000-7ff4cc5b4000 r--s 00006000 fd:03 936839                     /usr/share/java/java-atk-wrapper.jar
+7ff4cc5b4000-7ff4cc5b7000 r--s 0003d000 fd:03 1071818                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+7ff4cc5b7000-7ff4cc710000 rw-p 00000000 00:00 0 
+7ff4cc710000-7ff4cc711000 r--s 00002000 fd:03 1071821                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/dnsns.jar
+7ff4cc711000-7ff4cc713000 r--s 00012000 fd:03 1071822                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/zipfs.jar
+7ff4cc713000-7ff4cc71b000 rw-s 00000000 fd:03 402848                     /tmp/hsperfdata_root/15477
+7ff4cc71b000-7ff4cc71c000 rw-p 00000000 00:00 0 
+7ff4cc71c000-7ff4cc71d000 r--p 00000000 00:00 0 
+7ff4cc71d000-7ff4cc71e000 rw-p 00000000 00:00 0 
+7ff4cc71e000-7ff4cc71f000 rwxp 00000000 00:00 0 
+7ff4cc71f000-7ff4cc726000 r--s 00000000 fd:03 926732                     /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7ff4cc726000-7ff4cc727000 r--p 00022000 fd:03 1847297                    /lib/x86_64-linux-gnu/ld-2.19.so
+7ff4cc727000-7ff4cc728000 rw-p 00023000 fd:03 1847297                    /lib/x86_64-linux-gnu/ld-2.19.so
+7ff4cc728000-7ff4cc729000 rw-p 00000000 00:00 0 
+7fff69be0000-7fff69c01000 rw-p 00000000 00:00 0                          [stack]
+7fff69c43000-7fff69c45000 r-xp 00000000 00:00 0                          [vdso]
+7fff69c45000-7fff69c47000 r--p 00000000 00:00 0                          [vvar]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF8 -ea -Xmx768m 
+java_command: <unknown>
+Launcher Type: generic
+
+Environment Variables:
+PATH=/root/dj_test/myvenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+SHELL=/bin/bash
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x9635e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x9635e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x7d5d50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x7d5d50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x7d5d50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x7d5d50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x7d5e80], sa_mask[0]=0x00000000, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x7d5dd0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x7d5dd0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x7d5dd0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x7d5dd0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTRAP: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Ubuntu 14.04 (trusty)
+uname:Linux 3.16.0-30-generic #40~14.04.1-Ubuntu SMP Thu Jan 15 17:43:14 UTC 2015 x86_64
+libc:glibc 2.19 NPTL 2.19 
+rlimit: STACK 8192k, CORE 0k, NPROC 15724, NOFILE 4096, AS infinity
+load average:0.10 0.04 0.05
+
+/proc/meminfo:
+MemTotal:        4047900 kB
+MemFree:          304192 kB
+MemAvailable:    2036256 kB
+Buffers:          151432 kB
+Cached:          1584184 kB
+SwapCached:        56752 kB
+Active:          1878608 kB
+Inactive:        1530876 kB
+Active(anon):    1053764 kB
+Inactive(anon):   620772 kB
+Active(file):     824844 kB
+Inactive(file):   910104 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       1952764 kB
+SwapFree:        1793232 kB
+Dirty:               148 kB
+Writeback:             0 kB
+AnonPages:       1621200 kB
+Mapped:            93432 kB
+Shmem:               568 kB
+Slab:             271760 kB
+SReclaimable:     250532 kB
+SUnreclaim:        21228 kB
+KernelStack:        4624 kB
+PageTables:        17616 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     3976712 kB
+Committed_AS:    2402232 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       12352 kB
+VmallocChunk:   34359702252 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1265664 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       87936 kB
+DirectMap2M:     4106240 kB
+
+
+CPU:total 2 (initial active 2) (2 cores per cpu, 1 threads per core) family 6 model 6 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, popcnt, tsc
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 6
+model name	: QEMU Virtual CPU version 2.4.1
+stepping	: 3
+microcode	: 0x1
+cpu MHz		: 2493.990
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pse36 clflush mmx fxsr sse sse2 ht syscall nx lm rep_good nopl pni cx16 x2apic popcnt hypervisor lahf_lm
+bogomips	: 4987.98
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 6
+model name	: QEMU Virtual CPU version 2.4.1
+stepping	: 3
+microcode	: 0x1
+cpu MHz		: 2493.990
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 2
+core id		: 1
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pse36 clflush mmx fxsr sse sse2 ht syscall nx lm rep_good nopl pni cx16 x2apic popcnt hypervisor lahf_lm
+bogomips	: 4987.98
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 4047900k(304192k free), swap 1952764k(1793232k free)
+
+vm_info: OpenJDK 64-Bit Server VM (24.151-b01) for linux-amd64 JRE (1.7.0_151-b01), built on Nov 23 2017 15:24:35 by "buildd" with gcc 4.8.4
+
+time: Thu Feb 22 03:30:03 2018
+elapsed time: 1222 seconds
+

@@ -1,0 +1,10 @@
+{% extends 'blog_test/base.html' %}
+
+{% block content %}
+    <h1>input keyword</h1>
+    <form method="POST" class="crawling-form">{% csrf_token %}
+        {{ form.as_p}}
+
+        <button type="submit" class="submit">Save</button>
+    </form>
+{% endblock %}

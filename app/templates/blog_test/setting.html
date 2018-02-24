@@ -1,0 +1,371 @@
+{% load staticfiles %}
+<html>
+<meta charset="UTF-8">
+<link href="src/jquery.minical.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{% static 'css/jquery.minical.css' %}">
+
+<head>
+  <title>
+    빅데이터 분석모듈
+  </title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      background: rgb(230, 230, 230);
+      font-family: Cambria Math;
+    }
+
+    .full {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      /*margin: 80px auto;*/
+      /*border: 1px solid #bcbcbc;*/
+    }
+
+    .header {
+      width: 100%;
+      height: 125px;
+      /*border: 1px solid black;*/
+      float: left;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      background: rgb(0, 32, 96);
+      color: white;
+      display: table;
+    }
+
+    .header_title {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 22pt;
+      font-weight: 900;
+    }
+
+    .title2 {
+      font-size: 15pt;
+    }
+
+    .setting-test {
+      float: left;
+      width: 100%;
+      height: 550px;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      position: absolute;
+      width: 100%;
+      height: 550px;
+
+    }
+
+    .setting_box {
+      position: absolute;
+      width: 1013px;
+      height: 320px;
+      left: 50%;
+      bottom: 60%;
+      margin-bottom: -160px;
+      margin-left: -490px;
+      /*border: 1px solid black;*/
+
+    }
+
+    .collection_range {
+      width: 330px;
+      height: 330px;
+      float: left;
+      border: 1px solid black;
+      margin-right: 20px;
+      background: white;
+    }
+
+    .keyword {
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      left: 50%;
+      margin-left: -165px;
+      border: 1px solid black;
+      background: white;
+
+    }
+
+    .input {
+      padding: 0 10px;
+    }
+
+    .collection_period {
+      width: 330px;
+      height: 330px;
+      float: right;
+      border: 1px solid black;
+      background: white;
+    }
+
+    .select_date {
+      padding: 0 10px;
+    }
+
+    .title_text {
+      font-size: 18pt;
+      font-weight: 700;
+      color: white;
+    }
+
+    .title_box {
+      display: table;
+      width: 100%;
+      height: 65px;
+      background: rgb(88, 119, 166);
+      margin-bottom: 20px;
+    }
+
+    .title_box_inner {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .site {
+      width: 100%;
+      height: 80px;
+      margin-bottom: 20px;
+      padding: 0 10px;
+      /*border: 1px solid black;*/
+    }
+
+    .logo_box {
+      width: 100px;
+      height: 80px;
+      float: left;
+      margin-right: 10px;
+      display: table;
+    }
+
+    .checkbox {
+      width: 200px;
+      height: 100%;
+      float: left;
+    }
+
+    .daum_inner {
+      width: 100px;
+      height: 40px;
+      margin-right: 10px;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .naver_inner {
+      width: 100px;
+      height: 23px;
+      margin-right: 10px;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .naver_img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .daum_img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .form-control {
+      width: 80px;
+    }
+
+    .button_box {
+      position: absolute;
+      width: 130px;
+      height: 65px;
+      left: 50%;
+      margin-left: -65px;
+      bottom: 10%;
+    }
+
+    .btn {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(0, 176, 240);
+      border-style: solid;
+    }
+
+    .btn_text {
+      font-size: 13pt;
+      font-weight: 600;
+      color: white;
+    }
+
+    .btn {
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+      border-style: solid;
+      border-color: transparent;
+      box-shadow: 0 3px 4px 0 rgb(107, 97, 103);
+    }
+
+    .btn:hover {
+      box-shadow: 0 15px 12px 0 rgb(107, 97, 103);
+    }
+
+    .btn:active {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      box-shadow: 0 9px 7px 0 rgb(107, 97, 103);
+    }
+
+    .foo {
+      width: 100%;
+      float: left;
+      bottom: 0;
+      /*border: 1px solid black;*/
+    }
+  </style>
+</head>
+
+<body>
+  <div class="full">
+
+    <div class="header">
+      <div class="header_title">
+        <p class="title">
+          빅데이터 수집(수집대상으로 포털사이트 선택한 경우)
+        </p>
+        <p class="title2">
+          분석을 위한 데이터를 업로드하고, 편집 또는 다운로드 한 후 분석단계로 넘어가는 곳 입니다.
+        </p>
+      </div>
+    </div>
+
+    <form method="POST" class="setting-test">{% csrf_token %}
+      <div class="container">
+        <div class="setting_box">
+
+          <div class="collection_range">
+            <div class="title_box">
+              <div class="title_box_inner">
+                <span class="title_text">수집 범위</span>
+              </div>
+            </div>
+
+            <div class="site naver">
+              <div class="logo_box">
+                <div class="naver_inner">
+                  <img src="{% static 'img/naver.png' %}" class="naver_img">
+                </div>
+              </div>
+              <div class="checkbox">
+                <br /> {% for ckbox in form.ck_naver %} {{ckbox}} {% endfor %}
+              </div>
+            </div>
+
+            <div class="site daum">
+              <div class="logo_box">
+                <div class="daum_inner">
+                  <img src="{% static 'img/daum.png' %}" class="daum_img">
+                </div>
+              </div>
+              <div class="checkbox">
+                <br /> {% for ckbox in form.ck_daum %} {{ckbox}} {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <div class="keyword">
+            <div class="title_box">
+              <div class="title_box_inner">
+                <span class="title_text">분석 키워드</span>
+              </div>
+            </div>
+
+            <div class="input">
+              <div class="input_keyword">
+                <p>
+                  키워드 :
+                </p>
+                {{form.keyword}}
+              </div>
+              <div class="input_count">
+                <p>
+                  수집 개수 :
+                </p>
+                {{form.article_count}}
+              </div>
+              <br />
+              <br />
+              <input type="checkbox" name="chk_info" value="title">제목만 수집
+              <br />
+              <br />
+              <span>본문전체가 아니라 분석키워드와 관련하여 제목만 수집하므로 용량을 줄일 수 있습니다</span>
+            </div>
+          </div>
+
+          <div class="collection_period">
+            <div class="title_box">
+              <div class="title_box_inner">
+                <span class="title_text">수집 기간</span>
+              </div>
+            </div>
+
+            <div class="select_date">
+              <form class="demo-1">
+                <input type='text' class="form-control">
+                <input type='text' class="form-control">
+              </form>
+              <h5>수집 단위</h5>
+              <input type="radio" name="radio_info" value="none">미사용
+              <input type="radio" name="radio_info" value="day">하루
+              <input type="radio" name="radio_info" value="week">일주일
+              <input type="radio" name="radio_info" value="month">한달
+              <input type="radio" name="radio_info" value="year">일년
+            </div>
+          </div>
+        </div>
+
+        <div class="button_box">
+          <a href="{% url 'setting'%}">
+          <button class="btn data_collection_btn" type="submit">
+              <span class="btn_text">
+                데이터 수집 및 저장
+              </span>
+            </button>
+          </a>
+        </div>
+
+      </div>
+    </form>
+    <div class="foo">
+      foot
+    </div>
+
+  </div>
+
+  <script src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+  <script src="{% static 'js/jquery.minical.js' %}"></script>
+  <script>
+    $("form.demo-1 :text").minical();
+  </script>
+
+
+</body>
+
+</html>

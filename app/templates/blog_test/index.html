@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery minical Plugin Examples</title>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link href="jquery.minical.css" rel="stylesheet" type="text/css">
+
+<style>
+ul, li { list-style: none; }
+
+.demo-3 i {
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+}
+
+.container { margin: 150px auto; }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <h2>Basic</h2>
+      <form class="demo-1">
+        <input type='text' class="form-control">
+      </form>
+    </div>
+    <div class="col-lg-4">
+      <h2>Inline</h2>
+      <form class="demo-2">
+        <input type='text' class="form-control">
+      </form>
+    </div>
+    <div class="col-lg-4">
+      <h2>Custom Trigger Icon</h2>
+      <form class="demo-3">
+        <input type='text' class="form-control">
+        <i class="fa fa-calendar trigger-icon"></i>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="src/jquery-1.11.3.min.js"></script>
+<script src="jquery.minical.js"></script>
+<script>
+$("form.demo-1 :text").minical();
+$("form.demo-2 :text").minical({
+        inline: true
+      });
+	  $("form.demo-3 :text").minical({
+        trigger: "i.trigger-icon"
+      });
+</script>
+
+</body>
+</html>

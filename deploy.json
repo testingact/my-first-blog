@@ -1,0 +1,8 @@
+{
+  "REPO_URL":"https://github.com/Beomi/irkshop.git",
+  "PROJECT_NAME":"django_test",
+  "REMOTE_HOST_SSH":"114.108.167.109:8080",
+  "REMOTE_HOST":"114.108.167.109",
+  "REMOTE_USER":"django",
+  "REMOTE_PASSWORD":"django_pwd123"
+}

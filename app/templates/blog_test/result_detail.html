@@ -1,0 +1,192 @@
+{% load staticfiles %}
+<meta charset="UTF-8">
+<html>
+<head>
+  <title>
+    수집 결과
+  </title>
+  <style type="text/css">
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  .full {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*margin: 80px auto;*/
+    /*border: 1px solid #bcbcbc;*/
+  }
+
+  .header {
+    width: 100%;
+    height: 125px;
+    /*border: 1px solid black;*/
+    float: left;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    background: rgb(0, 32, 96);
+    color: white;
+    display: table;
+  }
+
+  .header_inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .hd_title {
+    font-size: 22pt;
+    font-weight: 900;
+  }
+
+  .container {
+    width: 90%
+    height: 500px;
+    padding: 0 15px;
+    margin-bottom: 20px;
+  }
+
+  .result {
+    overflow: auto;
+    height: 500px;
+    border: 1px solid black;
+  }
+
+  .btn {
+    position: absolute;
+    width: 120px;
+    height: 80px;
+    left: 50%;
+    margin-left: -60px;
+  }
+  </style>
+
+</head>
+
+  <body>
+    <div class="full">
+      <div class="header">
+        <div class="header_inner">
+          <p class="hd_title">
+            수집 결과
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="result">
+          <div class="keyword">
+            <p class="keyword_title">
+              키워드 : {{crawlings.keyword}}<br />
+            </p>
+            <p>
+              ---------------------------------------
+            </p>
+          </div>
+          <div class="naver">
+            <p class="title">
+              네이버<br />
+              ---------------------------------------
+            </p>
+            <div class="naver_blog">
+              <p class="title">
+                블로그<br />
+                ---------------------------------------
+              </p>
+              {% for url in naver_blog_result %}
+              <a href="{{url.0}}">{{url.0}}</a><br />
+              {{url.1}}<br />
+              {{url.2}}<br />
+              {% endfor %}<br /><br />
+            </div>
+            <div class="naver_news">
+              <p class="title">
+                뉴스<br />
+                ---------------------------------------
+              </p>
+              {% for url in naver_news_result %}
+              <a href="{{url.0}}">{{url.0}}</a><br />
+              {{url.1}}<br />
+              {{url.2}}<br />
+              {% endfor %}<br /><br />
+            </div>
+            <div class="naver_cafe">
+              <p class="title">
+                카페<br />
+                ---------------------------------------
+              </p>
+              {% for url in naver_cafe_result %}
+              <a href="{{url.0}}">{{url.0}}</a><br />
+              {{url.1}}<br />
+              {{url.2}}<br />
+              {% endfor %}<br /><br />
+            </div>
+
+          </div>
+          <div class="daum">
+            <p class="title">
+              다음<br />
+              ---------------------------------------
+            </p>
+            <div class="daum_blog">
+              <p class="title">
+                블로그<br />
+                ---------------------------------------
+              </p>
+              {% for url in daum_blog_result %}
+              <a href="{{url.0}}">{{url.0}}</a><br />
+              {{url.1}}<br />
+              {{url.2}}<br />
+              {% endfor %}<br /><br />
+            </div>
+            <div class="daum_web">
+              <p class="title">
+                웹<br />
+                ---------------------------------------
+              </p>
+              {% for url in daum_web_result %}
+              <a href="{{url.0}}">{{url.0}}</a><br />
+              {{url.1}}<br />
+              {{url.2}}<br />
+              {% endfor %}<br /><br />
+            </div>
+            <div class="daum_cafe">
+              <p class="title">
+                카페<br />
+                ---------------------------------------
+              </p>
+              {% for url in daum_cafe_result %}
+              <a href="{{url.0}}">{{url.0}}</a><br />
+              {{url.1}}<br />
+              {{url.2}}<br />
+              {% endfor %}<br />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn_box">
+        <a href="{% url 'export_csv' pk=crawlings.pk %}">
+        <button class="btn">
+            <span class="btn_text">
+              결과 다운로드
+            </span>
+          </button>
+        </a>
+      </div>
+    </div>
+
+
+
+
+  </body>
+
+</html>

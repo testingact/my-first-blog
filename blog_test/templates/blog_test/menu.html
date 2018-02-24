@@ -1,0 +1,266 @@
+<html>
+<meta charset="UTF-8">
+
+<head>
+  <title>
+    빅데이터 분석모듈
+  </title>
+  <style type="text/css">
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+    background: rgb(230, 230, 230);
+  }
+  .full {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*margin: 80px auto;*/
+    /*border: 1px solid #bcbcbc;*/
+  }
+
+  .header {
+    width: 100%;
+    height: 125px;
+    /*border: 1px solid black;*/
+    float: left;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    background: rgb(0, 32, 96);
+    color: white;
+    display: table;
+  }
+
+  .header_title {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 22pt;
+    font-weight: 900;
+  }
+
+  .title2 {
+    font-size: 15pt;
+  }
+
+  .container {
+    width: 100%;
+    height: 650px;
+    float: left;
+    /*border: 1px solid black;*/
+  }
+
+  .foo {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+  }
+
+  .foo_text_box {
+    position: absolute;
+    bottom: 10%;
+    color: black;
+  }
+
+  .leftbox {
+    width: 100px;
+    height: 650px;
+    float: left;
+    /*border: 1px solid black;*/
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .centerbox {
+    position: absolute;
+    width: 1100px;
+    height: 650px;
+    left: 50%;
+    margin-left: -550px;
+    /*border: 1px solid black;*/
+    margin-right: 20px;
+
+  }
+
+  .rightbox {
+    width: 100px;
+    height: 650px;
+    float: right;
+    /*border: 1px solid black;*/
+  }
+
+  .button_box {
+    position: absolute;
+    width: 700px;
+    height: 350px;
+    /*border: 1px solid black;*/
+    top: 50%;
+    left: 50%;
+    margin-top: -175px;
+    margin-left: -350px;
+  }
+
+  .button1 {
+    width: 300px;
+    height: 350px;
+    float: left;
+    /*border: 1px solid black;*/
+  }
+
+  .button2 {
+    width: 300px;
+    height: 350px;
+    float: right;
+    /*border: 1px solid black;*/
+  }
+
+  .btn_box {
+    width: 300px;
+    height: 350px;
+    float: left;
+  }
+
+  .btn {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border-style: solid;
+    border-color: transparent;
+    box-shadow: 0 3px 4px 0 rgb(107, 97, 103);
+  }
+
+  .btn:hover {
+    box-shadow: 0 15px 12px 0 rgb(107, 97, 103);
+  }
+
+  .btn:active {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    box-shadow: 0 9px 7px 0 rgb(107, 97, 103);
+  }
+
+  .data_collection_btn {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(200, 22, 119);
+  }
+
+  .data_upload_btn {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+
+  .btn_text {
+    font-size: 18pt;
+    font-weight: 700;
+  }
+
+  .explain_text {
+    font-size: 13pt;
+    font-weight: 500;
+  }
+
+  .explain_box {
+    display: table;
+    width: 500px;
+    height: 100px;
+    float: right;
+  }
+
+  .explain_box_inner {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+
+
+  </style>
+</head>
+
+<body>
+  <div class="full">
+    <div class="header">
+      <div class="header_title">
+        <p class="title">
+          빅데이터 분석모듈
+        </p>
+        <p class="title2">
+          빅데이터 수집, 저장, 정체, 기초분석, 응용분석을 위한 곳입니다.<br />
+          현재는 데이터 업로드, 빈도분석, 기술통계분석 구조방정식모델(SEM)분석만 가능하지만 점차 업데이트 예정입니다.
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="leftbox">
+        left
+      </div>
+      <div class="centerbox">
+
+        <div class="button_box">
+          <div class="button1">
+            <div class="btn_box data_collection">
+              <a href="{% url 'setting'%}">
+                <button class="btn data_collection_btn">
+                  <p class="btn_text">
+                    데이터 수집 및 저장
+                  </p>
+                  <br />
+                  <p class="explain_text">
+                    포털사이트,  SNS에서 자료를 수집하고 저장합니다.<br />
+                    웹페이지를 직접 입력하여 자료를 수집할 수도 있습니다.
+                  </p>
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="button2">
+            <div class="btn_box data_upload">
+              <button class="btn data_upload_btn">
+                <p class="btn_text">
+                  분석
+                </p>
+                <br /><br /><br />
+                <p class="explain_text">
+                  분석을 위해 데이터를 업로드 합니다.
+                </p>
+                <br /><br />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rightbox">
+        right
+      </div>
+    </div>
+
+    <div class="foo">
+      <div class="foo_text_box">
+        <p class="foo_text">
+          한국 사회 데이터과학 연구원 ㈜<br /><br />
+          대전광역시 서구 배재로 155-40 21세기관 342호<br />
+          연락처: 042-520-5348 / 010-4300-8764 / bloodia00@hanmail.net
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</body>
+</html>
